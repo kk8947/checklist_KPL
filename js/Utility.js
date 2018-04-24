@@ -1,6 +1,6 @@
 
 //服务器地址
-var http = "http://192.168.8.172:18888/checklist/checklist/index.php/Home/";
+var http = "http://192.168.8.190:18888/Checklist_Interface/index.php/Home/";
 
 //时间戳转化成h:m:s的格式时间
 function timetrans(date){
