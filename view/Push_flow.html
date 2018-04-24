@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>赛前推流设备</title>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<script src="../js/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="../js/jquery-ui-11.4/jquery-ui.min.js"></script>
+	<link rel="stylesheet" href="../js/jquery-ui-11.4/jquery-ui.theme.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/font_googleapis.css">
+	<!-- <link rel="stylesheet" type="text/css" href="../css/normalize.css" /> -->
+	<link rel="stylesheet" type="text/css" href="../css/mycss.css">
+	<link rel="stylesheet" type="text/css" href="../fonts/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/animate.css">
+	<link rel="stylesheet" href="../css/dialog.css" type="text/css">
+	<link rel="stylesheet" href="../dist/noticejs.css" />
+	<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/b.dialog.bootstrap3.css" type="text/css">
+	<script type="text/javascript" src="../js/b.dialog.js" ></script>
+	<script type="text/javascript" src="../js/b.dialog.min.js"></script>
+	<script type="text/javascript" src="../js/tabulator.js"></script>
+	<script type="text/javascript" src="../js/Utility.js"></script>
+	<script src="../dist/notice.js"></script>
+	<script type="text/javascript" src="../bootstrap/js/bootstrap.js"></script>
+	<script type="text/javascript">
+	var tabledata = [
+	{id:1,region:null,inspect:"拖线板是否正常工作",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:154},
+	{id:2,region:null,inspect:"SDI矩阵是否正常工作",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:155},
+	{id:3,region:null,inspect:"推流机附近是否有异物",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:156},
+	{id:4,region:null,inspect:"赛事流画面以及声音是否正常",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:157},
+	{id:5,region:null,inspect:"Clean feed画面声音是否正常",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:158},
+	{id:6,region:null,inspect:"Arcvideo live是否正常运行",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:159},
+	{id:7,region:null,inspect:"UPS电源是否正常运行",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:160},
+	{id:8,region:null,inspect:"装备栏信号是否正常",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:161},
+	{id:9,region:null,inspect:"推流电脑是否正常运行",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:162},
+	{id:10,region:null,inspect:"内网信号是否正常",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:163},
+	{id:11,region:null,inspect:"Arcvideo live设置是否正确",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:164},
+	{id:12,region:null,inspect:"成都接入信号设置是否正常（特别关注）",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:165},
+	{id:13,region:null,inspect:"电信、联通网络线路ping值是否正常",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:166},
+	{id:14,region:null,inspect:"视频矩阵线路是否正常运作",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:167},
+	];
+	</script>
+</head>
+<body>
+	<ul class="nav nav-pills">
+	<li class="dropdown all-camera-dropdown">
+		<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+			选择签到表
+			<b class="caret"></b>
+		</a>
+		<ul class="dropdown-menu">
+			<li><a href="../index.html">游击Check</a></li>
+			<li><a href="../view/AV_Console_screen.html">AV控台区 大屏</a></li>
+			<li><a href="../view/AV_Console_lighting.html">AV控台区 灯光</a></li>
+			<li><a href="../view/Public_signal_subtitle.html">公共信号字幕</a></li>
+			<li><a href="../view/Public_signal_before.html">公共信号赛前</a></li>
+			<li><a href="../view/Public_signal_after.html">公共信号赛后</a></li>
+			<li><a href="../view/Public_signal_audio.html">公共信号音频</a></li>
+			<li><a href="../view/Push_flow_one.html">推流周期1</a></li>
+			<li><a href="../view/Push_flow_two.html">推流周期2</a></li>
+			<li><a href="../view/Push_flow_three.html">推流周期3</a></li>
+			<li><a href="../view/Push_flow_four.html">推流周期4</a></li>
+			<li><a href="../view/Match_before.html">赛事赛前</a></li>
+			<li><a href="../view/Match_playing.html">赛事进行</a></li>
+			<li><a href="../view/Match_after.html">赛事赛后</a></li>
+			<li><a href="../view/Ticket_and_security.html">票务&安保</a></li>
+			<li><a href="../view/Interview.html">采访席</a></li>
+			<li><a href="../view/Infield.html">内场</a></li>
+		</ul>
+	</li>
+	</ul>
+	<header class="header">
+		<h1>2018年KPL春季赛常规赛 Checklist <span>赛前推流设备</span></h1>
+		<span id="cu_date">日期</span>
+	</header>
+	<div id="example-table-1" style="margin:auto;"></div>
+	<div style="text-align:right"><input type="button" value="提交" class="btn btn-primary" id="btnFormSave" style="width:200px; margin-right: 0px; margin-top: 10px; margin-top: 10px" /></div>
+
+	<div id="rep_btn" style="text-align:right"><input type="button" value="添加负责人检查意见" class="btn btn-primary" id="btn_rep" style="width:200px; margin-right: 0px; margin-top:5px;"/></div>
+
+ 	<div class="rep_text">
+ 		<div><label class="rep" id="rep_name">负责人:null</label></div>
+ 		<div><label class="rep" id="rep_desc">检查意见及处理结果:null</label></div>
+ 	</div>
+
+	<script type="text/javascript">
+	//获取时间
+	function request_time(){
+ 		var date = new Date();
+		var Y = date.getFullYear();
+		var M = date.getMonth()+1 < 10 ? '0'+(date.getMonth()+1) : date.getMonth()+1;
+		var D = date.getDate() < 10 ? '0' + (date.getDate()) : date.getDate();
+		var day = Y + "年" + M + "月" + D + "日";
+
+		document.getElementById("cu_date").innerHTML = day;
+ 	};
+
+ 	//显示时间
+ 	request_time();
+
+ 	$(function() {
+		$('#btnFormSave').click(function(e){
+			var num = 0;
+			var id_arr = new Array();
+			var user_name = new String();
+			var desc = new String();
+			var code_arr = new Array();
+
+			for (var i = 0; i <tabledata.length; i++){
+				if (tabledata[i]["statue"] == 1) {
+					id_arr.push(tabledata[i]["inspect_id"]);
+					code_arr.push(tabledata[i]["id"]);
+					num ++;
+				};
+			}
+			if (num != 0) {
+				bDialog.open({
+				title : "选择了 " + num + " 项",
+				width : 500,
+				height : 310,
+				customClass : 'blue',
+				url : '../hello.html',
+				callback:function(data){
+					console.log("12");
+					console.log(data);
+					if(data && data.results && data.results.length > 0 ){
+						new NoticeJs({
+			    			text: '提交数据中……',
+			    			type: "success",
+			    			position: 'bottomRight',
+			    			timeout: 15,
+			    			animation: {
+			        			open: 'animated flipInX',
+			        			close: 'animated flipOutX'
+			    			}
+						}).show();
+						user_name = data.results[0].userName;
+						desc = data.results[0].userDesc;
+						send_confrim(user_name,desc,id_arr,code_arr);
+					}
+				}
+			});
+			}
+		});
+	});
+
+	//查询负责人提交信息
+	function send_rep_info(){
+		var date = new Date();
+		var Y = date.getFullYear();
+		var M = date.getMonth()+1 < 10 ? '0'+(date.getMonth()+1) : date.getMonth()+1;
+		var D = date.getDate() < 10 ? '0' + (date.getDate()) : date.getDate();
+		var day = Y+M+D;
+		var url = http + "index/request_rep_info";
+		var dic = {"project_id":"8","confirm_day":day};
+		$.post(url,dic,request_rep_info);
+
+	}
+
+	//获得负责人返回信息
+	function request_rep_info(data,status){
+		if (data["code"] == 200) {
+			$("#rep_btn").remove();
+
+			var name = "负责人:" + data["data"][0]["user_name"];
+			var desc = "检查意见及处理结果:" +data["data"][0]["confirm_desc"];
+
+			console.log(data);
+			document.getElementById("rep_name").innerHTML = name;
+			document.getElementById("rep_desc").innerHTML = desc;
+
+		};
+	}
+
+	send_rep_info();
+
+	//负责人确认
+	$(function(){
+		$('#btn_rep').click(function(e){
+			bDialog.open({
+				title : "负责人确认/意见/处理结果",
+				width : 500,
+				height : 310,
+				customClass : 'blue',
+				url : '../responsibility_confirm.html',
+				callback:function(data){
+						if(data && data.results && data.results.length > 0 ){
+							new NoticeJs({
+			    				text: '提交数据中……',
+			    				type: "success",
+			    				position: 'bottomRight',
+			    				timeout: 15,
+			    				animation: {
+			        				open: 'animated flipInX',
+			        				close: 'animated flipOutX'
+			    				}
+							}).show();
+							user_name = data.results[0].userName;
+							desc = data.results[0].userDesc;
+							console.log(data.results);
+							send_rep_confirm(user_name,desc);
+						}
+				}
+			});
+		});
+	});
+
+	//提交负责人确认信息接口
+	function send_rep_confirm(name,desc){
+		var dic = {"user":name,"desc":desc,"project_id":"8"};
+		var url = http + "index/rep_submit_confirm";
+		$.post(url,dic,rep_requestinfo);
+	}
+
+	//收到负责人确认信息接口返回
+	function rep_requestinfo(data,status){
+		if (data["code"] == 200) {
+			$("#rep_btn").remove();
+			send_rep_info();
+		};
+	}
+
+	//加载数据
+	function relaodinfo(type){
+		var date = new Date();
+		var Y = date.getFullYear();
+		var M = date.getMonth()+1 < 10 ? '0'+(date.getMonth()+1) : date.getMonth()+1;
+		var D = date.getDate() < 10 ? '0' + (date.getDate()) : date.getDate();
+		var day = Y+M+D;
+		var url = http + "index/request_info";
+		if (type == 1) {
+			var dic = {"day":day,"project":"8","code_s":"1","code_e":"14"};
+			$.post(url,dic,requestinfo);
+		}
+	}
+
+	//获取数据后的操作
+	function requestinfo(data,status){
+		var data_json = data["data"];
+		console.log(data);
+		for(var i = 0; i < data_json.length; i ++){
+			for (var j = 0; j < tabledata.length; j ++){
+				var a = data_json[i]["code"];
+				var b = tabledata[j]["id"];
+
+				if (a == b) {
+					var time = data_json[i]["inspect_time"];
+					time = timetrans(time);
+
+					tabledata[j]["confirm"] = 1;
+					tabledata[j]["time"] = time;
+					tabledata[j]["person"] = data_json[i]["user_name"];
+					tabledata[j]["desc"] = data_json[i]["user_desc"];
+					tabledata[j]["statue"] = -1;
+					tabledata[j]["inspect_id"] = data_json[i]["inspect_id"];
+				};
+			};
+		};
+		$("#example-table-1").tabulator("setData",tabledata);
+	}
+
+	//发送确认信息
+	function send_confrim(name,desc,id_arr,code){
+		console.log(code);
+		var dic = {"user":name,"desc":desc,"id_arr":id_arr,"project_id":"8","code_arr":code};
+		var url = http + "index/submit_confirm";
+		$.post(url,dic,send_requstinfo);
+	}
+
+	//确认信息返回
+	function send_requstinfo(data,status){
+		console.log(data);
+		if (data["code"] == 200) {
+			relaodinfo(1);
+		};
+	}
+
+	//加载表格1
+	$("#example-table-1").tabulator({
+		headerBackgroundColor: "#FFE4C4",
+		rowBackgroundColor:"#FFFFF0",
+		rowHoverBackground:"#D8BFD8",
+		fitColumns:true,
+		columns:[ 
+			{title:"选择", field:"statue", formatter:
+				function(value, data, cell, row, options){
+					var select_no = "<img src='../image/icon_register_radio@2x.png' alt='未选择' width=50% heigth=50%/>";
+					var select_on = "<img src='../image/icon_register_radio_on@2x.png' alt='已选择' width=50% heigth=50%/>";
+					if(value == 1){
+						return select_on;
+					}
+					else if(value == -1){
+						return null;
+					}
+					else{
+						return select_no;
+					}
+				}
+				,align:"center",width:40,sortable:false,
+				onClick:function(e, cell, val, row){
+					var select_stu = tabledata[row.id - 1].statue;
+					if (select_stu == 1) {
+						tabledata[row.id - 1].statue = 0;
+						select_stu = 0;
+					}
+					else if (select_stu == -1) {
+
+					}
+					else {
+						tabledata[row.id - 1].statue = 1;
+						select_stu = 1;
+					};
+					$("#example-table-1").tabulator("setData",tabledata); 
+			 	}
+			 },
+			{title:"检查项", field:"inspect", sorter:"string",width:500,sortable:false},
+			{title:"确认", field:"confirm", sorter:"string", formatter:"tickCross", align:"center", width:100,sortable:false},
+			{title:"检查时间", field:"time", sorter:"string", align:"center", width:100,sortable:false},
+			{title:"检查人", field:"person", sorter:"string", width:100,sortable:false},
+			{title:"备注", field:"desc", sorter:"string", align:"center",sortable:false}
+		],
+
+	});
+
+	//加载数据1
+	relaodinfo(1);
+
+	//绘制表格
+	$(window).resize(function(){
+		$("#example-table-1").tabulator("redraw");
+	});
+
+
+
+ 	</script>
+</body>
+</html>

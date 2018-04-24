@@ -1,0 +1,859 @@
+[ 2018-04-17T16:24:24+08:00 ] ::1 /checklist/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000837s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001720s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001784s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001785s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001891s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001658s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001741s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002210s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002293s ]
+
+[ 2018-04-17T16:28:00+08:00 ] ::1 /checklist/index.php/home/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000673s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001805s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001878s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001502s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001602s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001553s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001611s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001287s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001394s ]
+
+[ 2018-04-17T16:30:00+08:00 ] ::1 /checklist/index.php/home/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000358s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000609s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000669s ]
+
+[ 2018-04-17T16:30:17+08:00 ] ::1 /checklist/index.php/home/test
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000376s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000442s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000482s ]
+ERR: 无法加载控制器:Test
+
+[ 2018-04-17T16:30:26+08:00 ] ::1 /checklist/index.php/home/index/test
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000570s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001933s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002269s ]
+
+[ 2018-04-17T16:40:03+08:00 ] ::1 /checklist/index.php/home/index/request_info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000641s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001817s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001895s ]
+ERR: 参数错误或者未定义:day
+
+[ 2018-04-17T16:40:14+08:00 ] ::1 /checklist/index.php/home/index/request_info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000362s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000527s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000572s ]
+ERR: 系统不支持:mysql
+
+[ 2018-04-17T16:40:52+08:00 ] ::1 /checklist/index.php/home/index/request_info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000662s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001725s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001800s ]
+ERR: 系统不支持:mysql
+
+[ 2018-04-17T16:41:40+08:00 ] ::1 /checklist/index.php/home/index/request_info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000075s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001888s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001824s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001962s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `inspection_item_table` [ RunTime:0.002639s ]
+ERR: 1146:Table 'cookinggod.inspection_item_table' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `inspection_item_table`
+SQL: SELECT .inspect FROM `inspection_item_table`  [ RunTime:0.000324s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM `inspection_item_table`' at line 1
+ [ SQL语句 ] : SELECT .inspect FROM `inspection_item_table` 
+
+[ 2018-04-17T16:42:06+08:00 ] ::1 /checklist/index.php/home/index/request_info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000468s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000481s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000540s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SELECT Inspection_item_table.inspect FROM ``  [ RunTime:0.000156s ]
+ERR: 1103:Incorrect table name ''
+ [ SQL语句 ] : SELECT Inspection_item_table.inspect FROM `` 
+
+[ 2018-04-17T16:42:45+08:00 ] ::1 /checklist/index.php/home/index/request_info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000471s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000471s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000529s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `Inspection_item_table` [ RunTime:0.004207s ]
+ERR: 1146:Table 'cookinggod.inspection_item_table' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `Inspection_item_table`
+SQL: SELECT Inspection_item_table.inspect FROM `Inspection_item_table`  [ RunTime:0.000244s ]
+ERR: 1146:Table 'cookinggod.inspection_item_table' doesn't exist
+ [ SQL语句 ] : SELECT Inspection_item_table.inspect FROM `Inspection_item_table` 
+
+[ 2018-04-17T16:43:23+08:00 ] ::1 /checklist/index.php/home/index/request_info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002062s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001986s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002072s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `Inspection_item_table` [ RunTime:0.002311s ]
+ERR: 1146:Table 'cookinggod.inspection_item_table' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `Inspection_item_table`
+SQL: SELECT * FROM `Inspection_item_table`  [ RunTime:0.000278s ]
+ERR: 1146:Table 'cookinggod.inspection_item_table' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `Inspection_item_table` 
+
+[ 2018-04-17T16:43:41+08:00 ] ::1 /checklist/index.php/home/index/request_info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000338s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000448s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000500s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `inspection_item_table` [ RunTime:0.002763s ]
+ERR: 1146:Table 'cookinggod.inspection_item_table' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `inspection_item_table`
+SQL: SELECT * FROM `inspection_item_table`  [ RunTime:0.000252s ]
+ERR: 1146:Table 'cookinggod.inspection_item_table' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `inspection_item_table` 
+
+[ 2018-04-17T16:44:30+08:00 ] ::1 /checklist/index.php/home/index/request_info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000299s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000401s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000499s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `inspection_item_table` [ RunTime:0.004370s ]
+SQL: SELECT * FROM `inspection_item_table`  [ RunTime:0.001600s ]
+
+[ 2018-04-17T16:44:47+08:00 ] ::1 /checklist/index.php/home/index/request_info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003011s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001764s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001853s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `Inspection_item_table` [ RunTime:0.004550s ]
+SQL: SELECT Inspection_item_table.inspect FROM `Inspection_item_table`  [ RunTime:0.001176s ]
+
+[ 2018-04-17T16:45:04+08:00 ] ::1 /checklist/index.php/home/index/request_info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002207s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001991s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002101s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `Inspection_item_table` [ RunTime:0.004496s ]
+SQL: SELECT Inspection_item_table.inspect FROM `Inspection_item_table`  [ RunTime:0.001488s ]
+
+[ 2018-04-17T16:52:55+08:00 ] ::1 /html/checklist/index.php/home/index/request_info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000485s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000592s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000662s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/html/checklist/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `Inspection_item_table` [ RunTime:0.004049s ]
+SQL: SELECT Inspection_item_table.inspect FROM `Inspection_item_table`  [ RunTime:0.001236s ]
+
+[ 2018-04-17T17:03:30+08:00 ] ::1 /checklist/checklist/index.php/home/index/submit_confirm
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001435s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001703s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001780s ]
+
+[ 2018-04-17T17:07:49+08:00 ] ::1 /checklist/checklist/index.php/home/index/submit_confirm
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000872s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001644s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001763s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/checklist/checklist/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `travels_check_table` [ RunTime:0.007075s ]
+
+[ 2018-04-17T17:15:03+08:00 ] ::1 /checklist/checklist/index.php/home/index/submit_confirm
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000058s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002339s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001744s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001839s ]
+
+[ 2018-04-17T17:16:02+08:00 ] ::1 /checklist/checklist/index.php/home/index/submit_confirm
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000884s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001860s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001954s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/checklist/checklist/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `travels_check_table` [ RunTime:0.005722s ]
+SQL: INSERT INTO `travels_check_table` (`user_name`,`user_desc`,`inspect_id`,`inspect_time`,`day_time`) VALUES ('张三','这里是备注',1,1523956562,'2018-04-17') [ RunTime:0.002597s ]
+
+[ 2018-04-17T17:23:43+08:00 ] ::1 /checklist/checklist/index.php/home/index/request_info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002065s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002009s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002126s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/checklist/checklist/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `inspection_item_table` [ RunTime:0.005196s ]
+SQL: SELECT Inspection_item_table.inspect FROM `inspection_item_table` WHERE ( code < 5 )  [ RunTime:0.001097s ]
+
+[ 2018-04-17T17:49:02+08:00 ] ::1 /checklist/checklist/index.php/home/index/request_info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000930s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002029s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002127s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/checklist/checklist/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `travels_check_table` [ RunTime:0.003628s ]
+SQL: SELECT Inspection_item_table.inspect FROM `travels_check_table` WHERE ( 这里是备注 = day_time, 1 = project_id, code >= -1, code <= 0 )  [ RunTime:0.003331s ]
+ERR: 1054:Unknown column 'Inspection_item_table.inspect' in 'field list'
+ [ SQL语句 ] : SELECT Inspection_item_table.inspect FROM `travels_check_table` WHERE ( 这里是备注 = day_time, 1 = project_id, code >= -1, code <= 0 ) 
+
+[ 2018-04-17T17:50:00+08:00 ] ::1 /checklist/checklist/index.php/home/index/request_info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000385s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000797s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000862s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/checklist/checklist/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `travels_check_table` [ RunTime:0.004202s ]
+SQL: SELECT Inspection_item_table.inspect FROM `travels_check_table` WHERE ( 2018-04-17 = day_time, 1 = project_id, code >= -1, code <= 0 )  [ RunTime:0.002002s ]
+ERR: 1054:Unknown column 'Inspection_item_table.inspect' in 'field list'
+ [ SQL语句 ] : SELECT Inspection_item_table.inspect FROM `travels_check_table` WHERE ( 2018-04-17 = day_time, 1 = project_id, code >= -1, code <= 0 ) 
+
+[ 2018-04-17T17:50:43+08:00 ] ::1 /checklist/checklist/index.php/home/index/request_info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001831s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001646s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001725s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/checklist/checklist/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `travels_check_table` [ RunTime:0.002150s ]
+SQL: SELECT * FROM `travels_check_table` WHERE ( 2018-04-17 = day_time, 1 = project_id, code >= -1, code <= 0 )  [ RunTime:0.004211s ]
+ERR: 1241:Operand should contain 1 column(s)
+ [ SQL语句 ] : SELECT * FROM `travels_check_table` WHERE ( 2018-04-17 = day_time, 1 = project_id, code >= -1, code <= 0 ) 
+
+[ 2018-04-17T17:50:51+08:00 ] ::1 /checklist/checklist/index.php/home/index/request_info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000343s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000424s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000474s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/checklist/checklist/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `travels_check_table` [ RunTime:0.004247s ]
+SQL: SELECT * FROM `travels_check_table` WHERE ( 2018-04-17 = day_time, 1 = project_id )  [ RunTime:0.000284s ]
+ERR: 1241:Operand should contain 1 column(s)
+ [ SQL语句 ] : SELECT * FROM `travels_check_table` WHERE ( 2018-04-17 = day_time, 1 = project_id ) 
+
+[ 2018-04-17T17:51:16+08:00 ] ::1 /checklist/checklist/index.php/home/index/request_info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000401s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000552s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000631s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/checklist/checklist/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `travels_check_table` [ RunTime:0.003914s ]
+SQL: SELECT * FROM `travels_check_table` WHERE ( 2018-04-17 = day_time )  [ RunTime:0.001615s ]
+
+[ 2018-04-17T17:51:23+08:00 ] ::1 /checklist/checklist/index.php/home/index/request_info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000324s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000405s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000451s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/checklist/checklist/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `travels_check_table` [ RunTime:0.004359s ]
+SQL: SELECT * FROM `travels_check_table` WHERE ( 1 = project_id )  [ RunTime:0.000526s ]
+
+[ 2018-04-17T17:52:05+08:00 ] ::1 /checklist/checklist/index.php/home/index/request_info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000403s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000460s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000517s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/checklist/checklist/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `travels_check_table` [ RunTime:0.005408s ]
+SQL: SELECT * FROM `travels_check_table` WHERE ( 20180417 = day_time, 1 = project_id )  [ RunTime:0.000289s ]
+ERR: 1241:Operand should contain 1 column(s)
+ [ SQL语句 ] : SELECT * FROM `travels_check_table` WHERE ( 20180417 = day_time, 1 = project_id ) 
+
+[ 2018-04-17T17:52:49+08:00 ] ::1 /checklist/checklist/index.php/home/index/request_info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000333s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000408s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000457s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/checklist/checklist/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `travels_check_table` [ RunTime:0.003632s ]
+SQL: SELECT * FROM `travels_check_table` WHERE (  1 = project_id, code >= -1, code <= 0 )  [ RunTime:0.000308s ]
+ERR: 1241:Operand should contain 1 column(s)
+ [ SQL语句 ] : SELECT * FROM `travels_check_table` WHERE (  1 = project_id, code >= -1, code <= 0 ) 
+
+[ 2018-04-17T17:53:17+08:00 ] ::1 /checklist/checklist/index.php/home/index/request_info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000339s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000429s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000480s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/checklist/checklist/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `travels_check_table` [ RunTime:0.002538s ]
+SQL: SELECT * FROM `travels_check_table` WHERE (  1 = project_id, code > -1, code < 0 )  [ RunTime:0.001869s ]
+ERR: 1241:Operand should contain 1 column(s)
+ [ SQL语句 ] : SELECT * FROM `travels_check_table` WHERE (  1 = project_id, code > -1, code < 0 ) 
+
+[ 2018-04-17T17:53:23+08:00 ] ::1 /checklist/checklist/index.php/home/index/request_info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000328s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000419s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000472s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/checklist/checklist/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `travels_check_table` [ RunTime:0.003817s ]
+SQL: SELECT * FROM `travels_check_table` WHERE (  1 = project_id, )  [ RunTime:0.000233s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+ [ SQL语句 ] : SELECT * FROM `travels_check_table` WHERE (  1 = project_id, ) 
+
+[ 2018-04-17T17:53:28+08:00 ] ::1 /checklist/checklist/index.php/home/index/request_info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000307s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000502s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000640s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/checklist/checklist/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `travels_check_table` [ RunTime:0.004158s ]
+SQL: SELECT * FROM `travels_check_table` WHERE (  1 = project_id )  [ RunTime:0.000501s ]
+
+[ 2018-04-17T17:53:48+08:00 ] ::1 /checklist/checklist/index.php/home/index/request_info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000052s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000476s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000458s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000520s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/checklist/checklist/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `travels_check_table` [ RunTime:0.003744s ]
+SQL: SELECT * FROM `travels_check_table` WHERE ( 1 = project_id, 20180417 = day_time )  [ RunTime:0.000271s ]
+ERR: 1241:Operand should contain 1 column(s)
+ [ SQL语句 ] : SELECT * FROM `travels_check_table` WHERE ( 1 = project_id, 20180417 = day_time ) 
+
+[ 2018-04-17T17:56:36+08:00 ] ::1 /checklist/checklist/index.php/home/index/request_info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000346s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000482s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000547s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/checklist/checklist/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `travels_check_table` [ RunTime:0.004179s ]
+SQL: SELECT * FROM `travels_check_table` WHERE ( 1 = project_id, 请问 = day_time )  [ RunTime:0.000442s ]
+ERR: 1054:Unknown column '请问' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `travels_check_table` WHERE ( 1 = project_id, 请问 = day_time ) 
+
+[ 2018-04-17T17:57:28+08:00 ] ::1 /checklist/checklist/index.php/home/index/request_info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000372s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000478s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000536s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/checklist/checklist/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `travels_check_table` [ RunTime:0.004355s ]
+SQL: SELECT * FROM `travels_check_table` WHERE ( 1 = project_id and 20180417 = day_time )  [ RunTime:0.000469s ]
+
+[ 2018-04-17T17:57:56+08:00 ] ::1 /checklist/checklist/index.php/home/index/request_info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000378s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000487s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000541s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/checklist/checklist/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `travels_check_table` [ RunTime:0.004272s ]
+SQL: SELECT * FROM `travels_check_table` WHERE ( 1 = project_id and 20180417 = day_time and code >= -1 and code <= code_e )  [ RunTime:0.000291s ]
+ERR: 1054:Unknown column 'code_e' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `travels_check_table` WHERE ( 1 = project_id and 20180417 = day_time and code >= -1 and code <= code_e ) 
+
+[ 2018-04-17T17:58:17+08:00 ] ::1 /checklist/checklist/index.php/home/index/request_info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000326s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000406s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000453s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/checklist/checklist/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `travels_check_table` [ RunTime:0.004595s ]
+SQL: SELECT * FROM `travels_check_table` WHERE ( 1 = project_id and 20180417 = day_time and code > -1 and code < code_e )  [ RunTime:0.000331s ]
+ERR: 1054:Unknown column 'code_e' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `travels_check_table` WHERE ( 1 = project_id and 20180417 = day_time and code > -1 and code < code_e ) 
+
+[ 2018-04-17T17:58:50+08:00 ] ::1 /checklist/checklist/index.php/home/index/request_info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000365s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000435s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000501s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/checklist/checklist/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `travels_check_table` [ RunTime:0.004110s ]
+SQL: SELECT * FROM `travels_check_table` WHERE ( code > 0 )  [ RunTime:0.000418s ]
+
+[ 2018-04-17T17:58:58+08:00 ] ::1 /checklist/checklist/index.php/home/index/request_info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000310s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000521s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000598s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/checklist/checklist/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `travels_check_table` [ RunTime:0.004205s ]
+SQL: SELECT * FROM `travels_check_table` WHERE ( code >= 0 )  [ RunTime:0.000411s ]
+
+[ 2018-04-17T17:59:08+08:00 ] ::1 /checklist/checklist/index.php/home/index/request_info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000316s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000405s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000453s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/checklist/checklist/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `travels_check_table` [ RunTime:0.004123s ]
+SQL: SELECT * FROM `travels_check_table` WHERE ( code >= -1 )  [ RunTime:0.000412s ]
+
+[ 2018-04-17T17:59:22+08:00 ] ::1 /checklist/checklist/index.php/home/index/request_info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000338s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000484s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000534s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/checklist/checklist/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `travels_check_table` [ RunTime:0.003812s ]
+SQL: SELECT * FROM `travels_check_table` WHERE ( code >= -1 and code <= code_e )  [ RunTime:0.000322s ]
+ERR: 1054:Unknown column 'code_e' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `travels_check_table` WHERE ( code >= -1 and code <= code_e ) 
+
+[ 2018-04-17T17:59:44+08:00 ] ::1 /checklist/checklist/index.php/home/index/request_info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000561s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.013971s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.014081s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/checklist/checklist/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `travels_check_table` [ RunTime:0.004546s ]
+SQL: SELECT * FROM `travels_check_table` WHERE ( code <= 0 )  [ RunTime:0.000387s ]
+
+[ 2018-04-17T17:59:52+08:00 ] ::1 /checklist/checklist/index.php/home/index/request_info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000551s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000433s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000489s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/checklist/checklist/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `travels_check_table` [ RunTime:0.003704s ]
+SQL: SELECT * FROM `travels_check_table` WHERE ( code >= -1 )  [ RunTime:0.000481s ]
+
+[ 2018-04-17T18:00:02+08:00 ] ::1 /checklist/checklist/index.php/home/index/request_info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000346s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000557s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000633s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/checklist/checklist/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `travels_check_table` [ RunTime:0.004375s ]
+SQL: SELECT * FROM `travels_check_table` WHERE ( code =< 0 )  [ RunTime:0.000244s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '=< 0 )' at line 1
+ [ SQL语句 ] : SELECT * FROM `travels_check_table` WHERE ( code =< 0 ) 
+
+[ 2018-04-17T18:00:20+08:00 ] ::1 /checklist/checklist/index.php/home/index/request_info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000331s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000406s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000454s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/checklist/checklist/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `travels_check_table` [ RunTime:0.004170s ]
+SQL: SELECT * FROM `travels_check_table` WHERE ( code < 0 )  [ RunTime:0.000460s ]
+
+[ 2018-04-17T18:00:31+08:00 ] ::1 /checklist/checklist/index.php/home/index/request_info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000313s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000405s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000454s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/checklist/checklist/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `travels_check_table` [ RunTime:0.004335s ]
+SQL: SELECT * FROM `travels_check_table` WHERE ( code < 0 )  [ RunTime:0.000584s ]
+
+[ 2018-04-17T18:00:38+08:00 ] ::1 /checklist/checklist/index.php/home/index/request_info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000305s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000397s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000446s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/checklist/checklist/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `travels_check_table` [ RunTime:0.004304s ]
+SQL: SELECT * FROM `travels_check_table` WHERE ( code < 100 )  [ RunTime:0.000481s ]
+
+[ 2018-04-17T18:00:49+08:00 ] ::1 /checklist/checklist/index.php/home/index/request_info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000354s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000581s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000646s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/checklist/checklist/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `travels_check_table` [ RunTime:0.003984s ]
+SQL: SELECT * FROM `travels_check_table` WHERE ( code < 0 )  [ RunTime:0.000433s ]
+
+[ 2018-04-17T18:00:57+08:00 ] ::1 /checklist/checklist/index.php/home/index/request_info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000335s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000451s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000505s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/checklist/checklist/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `travels_check_table` [ RunTime:0.004046s ]
+SQL: SELECT * FROM `travels_check_table` WHERE ( code < 100 )  [ RunTime:0.000403s ]
+
+[ 2018-04-17T18:03:30+08:00 ] ::1 /checklist/checklist/index.php/home/index/request_info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000972s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001851s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001927s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/checklist/checklist/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `travels_check_table` [ RunTime:0.004680s ]
+SQL: SELECT * FROM `travels_check_table` WHERE ( 1 = project_id and 20180417 = day_time ) AND `code` <= '100'  [ RunTime:0.002107s ]
+
+[ 2018-04-17T18:03:39+08:00 ] ::1 /checklist/checklist/index.php/home/index/request_info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000335s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000409s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000459s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/checklist/checklist/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `travels_check_table` [ RunTime:0.003925s ]
+SQL: SELECT * FROM `travels_check_table` WHERE ( 1 = project_id and 20180417 = day_time ) AND `code` <= '100'  [ RunTime:0.000779s ]
+
+[ 2018-04-17T18:03:46+08:00 ] ::1 /checklist/checklist/index.php/home/index/request_info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000336s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000404s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000454s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/checklist/checklist/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `travels_check_table` [ RunTime:0.006618s ]
+SQL: SELECT * FROM `travels_check_table` WHERE ( 1 = project_id and 20180417 = day_time ) AND `code` <= '$code_e'  [ RunTime:0.000851s ]
+
+[ 2018-04-17T18:04:08+08:00 ] ::1 /checklist/checklist/index.php/home/index/request_info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000303s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000399s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000449s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/checklist/checklist/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `travels_check_table` [ RunTime:0.004029s ]
+SQL: SELECT * FROM `travels_check_table` WHERE ( 1 = project_id and 20180417 = day_time ) AND `code` <= '$code_e'  [ RunTime:0.000469s ]
+
+[ 2018-04-17T18:04:26+08:00 ] ::1 /checklist/checklist/index.php/home/index/request_info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000310s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000398s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000446s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/checklist/checklist/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `travels_check_table` [ RunTime:0.004299s ]
+SQL: SELECT * FROM `travels_check_table` WHERE ( 1 = project_id and 20180417 = day_time ) AND `code` <= '$code_e'  [ RunTime:0.000465s ]
+
+[ 2018-04-17T18:04:34+08:00 ] ::1 /checklist/checklist/index.php/home/index/request_info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000304s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000395s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000442s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/checklist/checklist/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `travels_check_table` [ RunTime:0.004361s ]
+SQL: SELECT * FROM `travels_check_table` WHERE ( 1 = project_id and 20180417 = day_time ) AND `code` >= '$code_s'  [ RunTime:0.000465s ]
+
+[ 2018-04-17T18:06:09+08:00 ] ::1 /checklist/checklist/index.php/home/index/request_info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000322s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000405s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000456s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/checklist/checklist/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `travels_check_table` [ RunTime:0.004100s ]
+SQL: SELECT * FROM `travels_check_table` WHERE ( 1 = project_id and 20180417 = day_time ) AND `code` <= '$code_e'  [ RunTime:0.000515s ]
+
+[ 2018-04-17T18:06:25+08:00 ] ::1 /checklist/checklist/index.php/home/index/request_info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000388s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000437s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000492s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/checklist/checklist/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `travels_check_table` [ RunTime:0.004083s ]
+SQL: SELECT * FROM `travels_check_table` WHERE ( 1 = project_id and 20180417 = day_time ) AND `code` <= '$code_e'  [ RunTime:0.000446s ]
+
+[ 2018-04-17T18:06:46+08:00 ] ::1 /checklist/checklist/index.php/home/index/request_info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000307s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000401s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000451s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/checklist/checklist/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `travels_check_table` [ RunTime:0.003859s ]
+SQL: SELECT * FROM `travels_check_table` WHERE ( 1 = project_id and 20180417 = day_time ) AND `code` >= '$code_s'  [ RunTime:0.000455s ]
+
+[ 2018-04-17T18:07:08+08:00 ] ::1 /checklist/checklist/index.php/home/index/request_info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000376s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000434s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000492s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/checklist/checklist/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `travels_check_table` [ RunTime:0.004051s ]
+SQL: SELECT * FROM `travels_check_table` WHERE ( code >= 0 ) AND `code` >= '$code_s'  [ RunTime:0.000462s ]
+
+[ 2018-04-17T18:07:15+08:00 ] ::1 /checklist/checklist/index.php/home/index/request_info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000326s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000516s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000582s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/checklist/checklist/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `travels_check_table` [ RunTime:0.004150s ]
+SQL: SELECT * FROM `travels_check_table` WHERE ( code >= 10 )  [ RunTime:0.000373s ]
+
+[ 2018-04-17T18:07:22+08:00 ] ::1 /checklist/checklist/index.php/home/index/request_info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000333s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000407s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000456s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/checklist/checklist/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `travels_check_table` [ RunTime:0.004030s ]
+SQL: SELECT * FROM `travels_check_table` WHERE ( code >= 0 )  [ RunTime:0.000456s ]
+
+[ 2018-04-17T18:07:40+08:00 ] ::1 /checklist/checklist/index.php/home/index/request_info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000313s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000485s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000536s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/checklist/checklist/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `travels_check_table` [ RunTime:0.004401s ]
+SQL: SELECT * FROM `travels_check_table` WHERE ( 1 = project_id and 20180417 = day_time and code >= 0 )  [ RunTime:0.000458s ]
+
+[ 2018-04-17T18:08:16+08:00 ] ::1 /checklist/checklist/index.php/home/index/request_info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000316s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000415s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000465s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/checklist/checklist/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `travels_check_table` [ RunTime:0.003698s ]
+SQL: SELECT * FROM `travels_check_table` WHERE ( code <= 10 )  [ RunTime:0.000400s ]
+
+[ 2018-04-17T18:08:38+08:00 ] ::1 /checklist/checklist/index.php/home/index/request_info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000071s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000606s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000455s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000513s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/checklist/checklist/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `travels_check_table` [ RunTime:0.003905s ]
+SQL: SELECT * FROM `travels_check_table` WHERE ( code <= 10 )  [ RunTime:0.000429s ]
+
+[ 2018-04-17T18:08:44+08:00 ] ::1 /checklist/checklist/index.php/home/index/request_info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000394s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000496s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000579s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/checklist/checklist/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `travels_check_table` [ RunTime:0.005146s ]
+SQL: SELECT * FROM `travels_check_table` WHERE ( 1 = project_id and 20180417 = day_time and code >= 10 )  [ RunTime:0.000423s ]
+
+[ 2018-04-17T18:09:05+08:00 ] ::1 /checklist/checklist/index.php/home/index/request_info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000318s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000403s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000453s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/checklist/checklist/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `travels_check_table` [ RunTime:0.004705s ]
+SQL: SELECT * FROM `travels_check_table` WHERE ( code <= 10 )  [ RunTime:0.000452s ]
+
+[ 2018-04-17T18:09:13+08:00 ] ::1 /checklist/checklist/index.php/home/index/request_info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000309s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000399s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000448s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/checklist/checklist/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `travels_check_table` [ RunTime:0.004118s ]
+SQL: SELECT * FROM `travels_check_table` WHERE ( code <= 100 )  [ RunTime:0.000396s ]
+
+[ 2018-04-17T18:09:59+08:00 ] ::1 /checklist/checklist/index.php/home/index/request_info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000328s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000407s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000456s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/checklist/checklist/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `travels_check_table` [ RunTime:0.004080s ]
+SQL: SELECT * FROM `travels_check_table` WHERE ( 1 = project_id and 20180417 = day_time and code >= 0 and code <= 100 )  [ RunTime:0.000478s ]
+
+[ 2018-04-17T18:10:05+08:00 ] ::1 /checklist/checklist/index.php/home/index/request_info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000338s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000410s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000459s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/checklist/checklist/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `travels_check_table` [ RunTime:0.004180s ]
+SQL: SELECT * FROM `travels_check_table` WHERE ( 1 = project_id and 20180417 = day_time and code >= 10 and code <= 100 )  [ RunTime:0.000455s ]
+
+[ 2018-04-17T18:12:16+08:00 ] ::1 /checklist/checklist/index.php/home/index/submit_confirm
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000588s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000449s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000501s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/checklist/checklist/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `travels_check_table` [ RunTime:0.004639s ]
+NOTIC: [8] Undefined variable: sss /Applications/MAMP/htdocs/checklist/checklist/Application/Home/Controller/IndexController.class.php 第 50 行.
+
+[ 2018-04-17T18:12:24+08:00 ] ::1 /checklist/checklist/index.php/home/index/submit_confirm
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000352s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000812s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000915s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/checklist/checklist/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `travels_check_table` [ RunTime:0.004384s ]
+NOTIC: [8] Undefined variable: sss /Applications/MAMP/htdocs/checklist/checklist/Application/Home/Controller/IndexController.class.php 第 50 行.
+
+[ 2018-04-17T18:12:39+08:00 ] ::1 /checklist/checklist/index.php/home/index/submit_confirm
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000448s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000454s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000511s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/checklist/checklist/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `travels_check_table` [ RunTime:0.004129s ]
+
+[ 2018-04-17T18:12:51+08:00 ] ::1 /checklist/checklist/index.php/home/index/submit_confirm
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000303s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000396s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000442s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/checklist/checklist/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `travels_check_table` [ RunTime:0.005163s ]
+
+[ 2018-04-17T18:16:54+08:00 ] ::1 /checklist/checklist/index.php/home/index/request_info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000579s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000416s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000467s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/checklist/checklist/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `travels_check_table` [ RunTime:0.004268s ]
+SQL: SELECT * FROM `travels_check_table` WHERE ( 1 = project_id and 20180417 = day_time and code >= 0 and code <= 100 )  [ RunTime:0.000523s ]
+

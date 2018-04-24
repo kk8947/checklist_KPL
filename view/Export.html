@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>导出页</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+
+	<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/b.dialog.bootstrap3.css" type="text/css">
+	<link rel="stylesheet" href="../js/jquery-ui-11.4/jquery-ui.theme.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/mycss.css">
+
+	<!-- 引入bootstrap-table样式 -->
+	<link href="../dist/bootstrap-table/bootstrap-table.min.css" rel="stylesheet">
+	<link href="../dist/bootstrap-table/bootstrap-table.min.js">
+	<link href="../dist/bootstrap-table/locale/bootstrap-table-zh-CN.min.js">
+	<script src="../js/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="../js/jquery-ui-11.4/jquery-ui.min.js"></script>
+	<script src="../src/bootstrap-table.js"></script>
+
+	<!-- export引用 -->
+	<link href="../dist/export/css/tableexport.min.css" rel="stylesheet">
+	<script src="../js/export/xlsx.core.min.js"></script>
+	<script src="../js/export/blob.js"></script>
+	<script src="../js/export/FileSaver.min.js"></script>
+	<script src="../dist/export/js/tableexport.js"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<!-- <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.12.1/bootstrap-table.min.js"></script> -->
+
+<!-- Latest compiled and minified Locales -->
+<!-- <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.12.1/locale/bootstrap-table-zh-CN.min.js"></script> -->
+
+
+	
+	
+</head>
+<body>
+	<div class="export_bg">
+		<table id="table"></table>
+	</div>
+	
+
+	<script type="text/javascript">
+	var tabledata = [
+	{id:1,region:"票务人员&设备",inspect:"票务人员按时到岗",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:245},
+	{id:2,region:"票务人员&设备",inspect:"查询当日票数",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:246,checktime:"16:00"},
+	{id:3,region:"票务人员&设备",inspect:"查询观众进场数量",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:247,checktime:"17:00"},
+	{id:4,region:"票务人员&设备",inspect:"查询观众进场数量",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:248,checktime:"18:00"},
+	{id:5,region:"票务人员&设备",inspect:"查询观众进场数量",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:249,checktime:"19:00"},
+	{id:6,region:"票务人员&设备",inspect:"查询观众进场数量",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:250,checktime:"20:00"},
+	{id:7,region:"票务人员&设备",inspect:"票务人员统一着装",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:251},
+	{id:8,region:"票务人员&设备",inspect:"检票和检证PDA设备可以正常使用",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:252},
+	{id:9,region:"票务人员&设备",inspect:"检票区wifi网络正常提供",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:253},
+	{id:10,region:"票务人员&设备",inspect:"检查所有观众座椅编号是否完整正确、扎带是否完好",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:254},
+	{id:11,region:"主管",inspect:"票务主管在现场指挥负责",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:255},
+	{id:12,region:"全体安保",inspect:"所有安保人员按时集合",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:256},
+	{id:13,region:"全体安保",inspect:"按时完成清场",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:257},
+	{id:14,region:"全体安保",inspect:"铁马、安检设备布置完毕",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:258},
+	{id:15,region:"全体安保",inspect:"安保人员无点位缺岗",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:259},
+	{id:16,region:"全体安保",inspect:"安保人员配备对讲机可以及时沟通",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:260},
+	{id:17,region:"安保主管",inspect:"主管在现场指挥负责",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:261},
+	];
+		$("#table").bootstrapTable({
+
+			data: tabledata,
+			cache: false, // 设置为 false 禁用 AJAX 数据缓存， 默认为true
+			striped: true,  //表格显示条纹，默认为false
+			columns: [
+				{field:"id",title:"编号",align:'center',valign: 'middle'},
+				{field:"region",title:"区域",align:'center',valign: 'middle'},
+				{field:"inspect",title:"检查项",align:'center',valign: 'middle'},
+				{field:"confirm",title:"确认",align:'center',valign: 'middle'},
+				{field:"time",title:"检查时间",align:'center',valign: 'middle'},
+				{field:"person",title:"检查人",align:'center',valign: 'middle'},
+				{field:"desc",title:"备注",align:'center',valign: 'middle'},
+
+			]
+
+		});
+
+		$(function(){
+			$("table").tableExport({
+				formats:["xlsx","xls","csv","txt"],
+				fileName: "table11",//导出文件名称
+				bootstrap:true
+			});
+		})
+
+		//重写导出按钮
+		$.fn.tableExport.xlsx = {
+    		defaultClass: "xlsx",
+    		buttonContent: "导出为 xlsx",
+    		mimeType: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+    		fileExtension: ".xlsx"
+		};
+
+		$.fn.tableExport.xls = {
+    		defaultClass: "xls",
+    		buttonContent: "导出为 xls",
+    		separator: "\t",
+    		mimeType: "application/vnd.ms-excel",
+    		fileExtension: ".xls"
+		};
+
+		$.fn.tableExport.csv = {
+    		defaultClass: "csv",
+    		buttonContent: "导出为 csv",
+    		separator: ",",
+    		mimeType: "application/csv",
+    		fileExtension: ".csv"
+		};
+
+		$.fn.tableExport.txt = {
+    		defaultClass: "txt",
+    		buttonContent: "导出为 txt",
+    		separator: "  ",
+    		mimeType: "text/plain",
+    		fileExtension: ".txt"
+		};
+	</script>
+</body>
+</html>

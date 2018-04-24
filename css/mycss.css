@@ -1,0 +1,77 @@
+.btnsave{
+	background-color: #4CAF50;
+	width: 100px;
+	height: 45px;
+	margin-right: 10px;
+	margin-top: -10px;
+	/*padding: 1em 1px 1em 1px;
+	padding-right: 1px;*/
+}
+
+
+.htmleaf-header1{
+padding: 1em 190px 1em;
+letter-spacing: -1px;
+text-align: center;
+}
+body{
+	padding:20px 40px;
+	font-family: 'Montserrat', sans-serif !important;
+}
+
+section:first-of-type header{
+	font-size: 50px;
+}
+
+section{
+	margin-bottom:20px;
+}
+
+ul>li{
+	margin-bottom:2px;
+}
+
+button, select{
+	margin-right:20px;
+}
+
+input{
+	font-family: 'Montserrat', sans-serif !important;
+
+}
+
+.header{
+	padding: 1em 190px 1em; /*内边距，上右下左*/
+	letter-spacing: -1px; /*字间距*/
+	text-align: center;
+}
+.header h1 {
+	color: #000000;
+	font-weight: 600;
+	font-size: 3em;
+	line-height: 1;
+	margin-bottom: 0;
+	font-family: "Microsoft YaHei","宋体","Segoe UI", "Lucida Grande", Helvetica, Arial,sans-serif, FreeSans, Arimo;
+}
+.header h1 span {
+	font-family: "Microsoft YaHei","宋体","Segoe UI", "Lucida Grande", Helvetica, Arial,sans-serif, FreeSans, Arimo;
+	display: block;
+	font-size: 60%;
+	font-weight: 400;
+	padding: 0.8em 0 0.5em 0;
+	color: #696969;
+}
+
+.rep{
+	margin-left: 10px;
+	font-size: 24px;
+}
+
+.controls{
+	margin-left: 10px;
+}
+
+.export_bg{
+	margin-left: 20px;
+	margin-right: 20px;
+}

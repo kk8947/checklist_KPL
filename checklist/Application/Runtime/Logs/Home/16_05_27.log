@@ -1,0 +1,1225 @@
+[ 2016-05-27T22:38:05+08:00 ] ::1 /cookinggod/index.php/Home/detection/shouye
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000261s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001361s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000772s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000859s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+NOTIC: [2] mysql_connect(): Connection refused /Applications/MAMP/htdocs/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+ERR: Connection refused
+
+[ 2016-05-27T22:38:05+08:00 ] ::1 /cookinggod/index.php/Home/detection/shouye
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000186s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001315s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000917s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001018s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+NOTIC: [2] mysql_connect(): Connection refused /Applications/MAMP/htdocs/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+ERR: Connection refused
+
+[ 2016-05-27T22:38:05+08:00 ] ::1 /cookinggod/index.php/Home/detection/shouye
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001404s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000917s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001018s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+NOTIC: [2] mysql_connect(): Connection refused /Applications/MAMP/htdocs/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+ERR: Connection refused
+
+[ 2016-05-27T22:38:11+08:00 ] ::1 /cookinggod/index.php/Home/detection/shouye
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000619s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000726s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000840s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM t_user,t_detection [ RunTime:0.000502s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't_detection' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM t_user,t_detection
+SQL: SELECT t_user.user_id,t_user.user_nickname,t_user.user_herderimage,t_detection.* FROM `t_user`,`t_detection` WHERE ( t_user.user_id=t_detection.user_id ) ORDER BY detection_time desc  [ RunTime:0.005758s ]
+SQL: SHOW COLUMNS FROM `t_detectioncell` [ RunTime:0.006348s ]
+SQL: SELECT * FROM `t_detectioncell` WHERE ( detection_id=38 )  [ RunTime:0.000402s ]
+SQL: SELECT * FROM `t_detectioncell` WHERE ( detection_id=39 )  [ RunTime:0.000367s ]
+SQL: SELECT * FROM `t_detectioncell` WHERE ( detection_id=40 )  [ RunTime:0.000677s ]
+SQL: SELECT * FROM `t_detectioncell` WHERE ( detection_id=35 )  [ RunTime:0.000324s ]
+SQL: SELECT * FROM `t_detectioncell` WHERE ( detection_id=31 )  [ RunTime:0.000353s ]
+SQL: SELECT * FROM `t_detectioncell` WHERE ( detection_id=36 )  [ RunTime:0.000349s ]
+SQL: SELECT * FROM `t_detectioncell` WHERE ( detection_id=37 )  [ RunTime:0.000287s ]
+SQL: SELECT * FROM `t_detectioncell` WHERE ( detection_id=41 )  [ RunTime:0.000975s ]
+SQL: SELECT * FROM `t_detectioncell` WHERE ( detection_id=33 )  [ RunTime:0.000694s ]
+
+[ 2016-05-27T22:38:34+08:00 ] ::1 /cookinggod/index.php/Home/cookbook/cookbytime
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001408s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000609s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000712s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `t_cookbook` [ RunTime:0.007894s ]
+SQL: SELECT * FROM `t_cookbook` WHERE ( cookbook_eattime='晚餐' )  [ RunTime:0.001479s ]
+SQL: SHOW COLUMNS FROM `t_material` [ RunTime:0.007453s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =10 )  [ RunTime:0.000351s ]
+SQL: SHOW COLUMNS FROM `t_collectionnumber` [ RunTime:0.002431s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =10 )  [ RunTime:0.000319s ]
+SQL: SHOW COLUMNS FROM `t_browsenumber` [ RunTime:0.002508s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =10 )  [ RunTime:0.000256s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =11 )  [ RunTime:0.000314s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =11 )  [ RunTime:0.000459s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =11 )  [ RunTime:0.000285s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =12 )  [ RunTime:0.000272s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =12 )  [ RunTime:0.000670s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =12 )  [ RunTime:0.000324s ]
+
+[ 2016-05-27T22:38:34+08:00 ] ::1 /cookinggod/index.php/Home/cookbook/type
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001011s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000546s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000638s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM t_browsenumber,t_cookbook [ RunTime:0.000184s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't_cookbook' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM t_browsenumber,t_cookbook
+SQL: SELECT t_cookbook.* FROM `t_browsenumber`,`t_cookbook` WHERE ( t_browsenumber.cookbook_id=t_cookbook.cookbook_id ) ORDER BY t_browsenumber.browsenumber_number desc  [ RunTime:0.007284s ]
+SQL: SHOW COLUMNS FROM `t_material` [ RunTime:0.003473s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =5 )  [ RunTime:0.000452s ]
+SQL: SHOW COLUMNS FROM `t_collectionnumber` [ RunTime:0.004850s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =5 )  [ RunTime:0.000353s ]
+SQL: SHOW COLUMNS FROM `t_browsenumber` [ RunTime:0.002720s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =5 )  [ RunTime:0.000221s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =6 )  [ RunTime:0.000325s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =6 )  [ RunTime:0.000293s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =6 )  [ RunTime:0.000333s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =11 )  [ RunTime:0.000376s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =11 )  [ RunTime:0.000337s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =11 )  [ RunTime:0.000314s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =7 )  [ RunTime:0.000394s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =7 )  [ RunTime:0.000285s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =7 )  [ RunTime:0.000261s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =3 )  [ RunTime:0.000427s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =3 )  [ RunTime:0.000319s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =3 )  [ RunTime:0.000237s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =12 )  [ RunTime:0.000302s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =12 )  [ RunTime:0.000512s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =12 )  [ RunTime:0.000312s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =4 )  [ RunTime:0.000302s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =4 )  [ RunTime:0.000252s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =4 )  [ RunTime:0.000248s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =9 )  [ RunTime:0.000290s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =9 )  [ RunTime:0.000351s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =9 )  [ RunTime:0.000288s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =10 )  [ RunTime:0.000296s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =10 )  [ RunTime:0.000279s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =10 )  [ RunTime:0.000374s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =13 )  [ RunTime:0.000340s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =13 )  [ RunTime:0.000267s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =13 )  [ RunTime:0.000301s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =8 )  [ RunTime:0.000357s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =8 )  [ RunTime:0.000312s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =8 )  [ RunTime:0.000331s ]
+
+[ 2016-05-27T22:38:34+08:00 ] ::1 /cookinggod/index.php/Home/user/daren
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000671s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000808s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000949s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.003359s ]
+SQL: SELECT * FROM `t_user` LIMIT 5   [ RunTime:0.000416s ]
+
+[ 2016-05-27T22:38:35+08:00 ] ::1 /cookinggod/index.php/Home/cookbook/type?type=14
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000727s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000793s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000890s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM t_collectionnumber,t_cookbook [ RunTime:0.000176s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't_cookbook' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM t_collectionnumber,t_cookbook
+SQL: SELECT t_cookbook.* FROM `t_collectionnumber`,`t_cookbook` WHERE ( t_collectionnumber.cookbook_id ) ORDER BY t_collectionnumber.collectionnumber_number desc  [ RunTime:0.001308s ]
+SQL: SHOW COLUMNS FROM `t_material` [ RunTime:0.003819s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =6 )  [ RunTime:0.000332s ]
+SQL: SHOW COLUMNS FROM `t_collectionnumber` [ RunTime:0.002084s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =6 )  [ RunTime:0.000445s ]
+SQL: SHOW COLUMNS FROM `t_browsenumber` [ RunTime:0.001962s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =6 )  [ RunTime:0.000301s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =10 )  [ RunTime:0.000298s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =10 )  [ RunTime:0.000272s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =10 )  [ RunTime:0.000258s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =3 )  [ RunTime:0.000278s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =3 )  [ RunTime:0.000274s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =3 )  [ RunTime:0.000285s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =7 )  [ RunTime:0.000313s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =7 )  [ RunTime:0.000317s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =7 )  [ RunTime:0.000319s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =11 )  [ RunTime:0.000331s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =11 )  [ RunTime:0.000328s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =11 )  [ RunTime:0.000265s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =4 )  [ RunTime:0.000255s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =4 )  [ RunTime:0.000287s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =4 )  [ RunTime:0.000258s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =8 )  [ RunTime:0.000402s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =8 )  [ RunTime:0.000308s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =8 )  [ RunTime:0.000218s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =12 )  [ RunTime:0.000234s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =12 )  [ RunTime:0.000264s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =12 )  [ RunTime:0.000268s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =5 )  [ RunTime:0.000261s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =5 )  [ RunTime:0.000293s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =5 )  [ RunTime:0.000257s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =9 )  [ RunTime:0.000318s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =9 )  [ RunTime:0.000254s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =9 )  [ RunTime:0.000323s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =13 )  [ RunTime:0.000374s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =13 )  [ RunTime:0.000296s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =13 )  [ RunTime:0.000278s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =9 )  [ RunTime:0.000296s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =9 )  [ RunTime:0.000285s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =9 )  [ RunTime:0.000287s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =13 )  [ RunTime:0.000307s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =13 )  [ RunTime:0.000345s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =13 )  [ RunTime:0.000314s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =6 )  [ RunTime:0.000373s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =6 )  [ RunTime:0.000308s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =6 )  [ RunTime:0.000310s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =10 )  [ RunTime:0.000339s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =10 )  [ RunTime:0.000319s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =10 )  [ RunTime:0.000292s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =3 )  [ RunTime:0.000288s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =3 )  [ RunTime:0.000261s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =3 )  [ RunTime:0.000297s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =7 )  [ RunTime:0.000356s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =7 )  [ RunTime:0.000267s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =7 )  [ RunTime:0.000283s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =11 )  [ RunTime:0.000313s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =11 )  [ RunTime:0.000287s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =11 )  [ RunTime:0.002182s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =4 )  [ RunTime:0.000391s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =4 )  [ RunTime:0.000300s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =4 )  [ RunTime:0.000235s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =8 )  [ RunTime:0.000292s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =8 )  [ RunTime:0.000274s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =8 )  [ RunTime:0.000237s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =12 )  [ RunTime:0.000299s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =12 )  [ RunTime:0.000436s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =12 )  [ RunTime:0.000432s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =5 )  [ RunTime:0.000442s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =5 )  [ RunTime:0.000626s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =5 )  [ RunTime:0.000574s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =5 )  [ RunTime:0.000345s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =5 )  [ RunTime:0.000447s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =5 )  [ RunTime:0.000406s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =9 )  [ RunTime:0.000313s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =9 )  [ RunTime:0.000360s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =9 )  [ RunTime:0.000434s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =13 )  [ RunTime:0.000396s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =13 )  [ RunTime:0.000435s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =13 )  [ RunTime:0.000340s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =6 )  [ RunTime:0.000285s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =6 )  [ RunTime:0.000752s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =6 )  [ RunTime:0.000378s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =10 )  [ RunTime:0.000313s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =10 )  [ RunTime:0.000302s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =10 )  [ RunTime:0.000714s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =3 )  [ RunTime:0.000369s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =3 )  [ RunTime:0.000374s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =3 )  [ RunTime:0.000404s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =7 )  [ RunTime:0.000372s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =7 )  [ RunTime:0.000382s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =7 )  [ RunTime:0.000313s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =11 )  [ RunTime:0.000383s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =11 )  [ RunTime:0.000360s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =11 )  [ RunTime:0.000278s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =4 )  [ RunTime:0.000247s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =4 )  [ RunTime:0.000206s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =4 )  [ RunTime:0.000228s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =8 )  [ RunTime:0.000263s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =8 )  [ RunTime:0.000285s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =8 )  [ RunTime:0.000279s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =12 )  [ RunTime:0.000311s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =12 )  [ RunTime:0.000523s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =12 )  [ RunTime:0.000350s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =6 )  [ RunTime:0.000514s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =6 )  [ RunTime:0.000390s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =6 )  [ RunTime:0.000297s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =10 )  [ RunTime:0.000237s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =10 )  [ RunTime:0.000246s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =10 )  [ RunTime:0.000228s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =3 )  [ RunTime:0.000231s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =3 )  [ RunTime:0.000237s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =3 )  [ RunTime:0.000230s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =7 )  [ RunTime:0.000670s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =7 )  [ RunTime:0.000982s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =7 )  [ RunTime:0.000446s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =11 )  [ RunTime:0.000474s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =11 )  [ RunTime:0.000324s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =11 )  [ RunTime:0.000343s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =4 )  [ RunTime:0.000331s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =4 )  [ RunTime:0.000314s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =4 )  [ RunTime:0.000342s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =8 )  [ RunTime:0.000323s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =8 )  [ RunTime:0.000344s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =8 )  [ RunTime:0.000442s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =12 )  [ RunTime:0.000316s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =12 )  [ RunTime:0.000252s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =12 )  [ RunTime:0.000327s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =5 )  [ RunTime:0.000315s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =5 )  [ RunTime:0.000464s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =5 )  [ RunTime:0.000470s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =9 )  [ RunTime:0.000518s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =9 )  [ RunTime:0.000448s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =9 )  [ RunTime:0.000497s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =13 )  [ RunTime:0.000451s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =13 )  [ RunTime:0.000310s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =13 )  [ RunTime:0.000312s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =6 )  [ RunTime:0.000296s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =6 )  [ RunTime:0.000420s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =6 )  [ RunTime:0.000288s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =10 )  [ RunTime:0.000260s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =10 )  [ RunTime:0.000237s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =10 )  [ RunTime:0.000225s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =3 )  [ RunTime:0.000224s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =3 )  [ RunTime:0.000194s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =3 )  [ RunTime:0.000184s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =7 )  [ RunTime:0.000228s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =7 )  [ RunTime:0.000236s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =7 )  [ RunTime:0.000216s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =11 )  [ RunTime:0.000212s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =11 )  [ RunTime:0.000288s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =11 )  [ RunTime:0.000223s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =4 )  [ RunTime:0.000261s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =4 )  [ RunTime:0.000277s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =4 )  [ RunTime:0.000197s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =8 )  [ RunTime:0.000196s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =8 )  [ RunTime:0.000250s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =8 )  [ RunTime:0.000208s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =12 )  [ RunTime:0.000262s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =12 )  [ RunTime:0.000210s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =12 )  [ RunTime:0.000213s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =5 )  [ RunTime:0.000213s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =5 )  [ RunTime:0.000395s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =5 )  [ RunTime:0.000491s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =9 )  [ RunTime:0.000493s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =9 )  [ RunTime:0.000696s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =9 )  [ RunTime:0.000722s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =13 )  [ RunTime:0.000406s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =13 )  [ RunTime:0.000348s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =13 )  [ RunTime:0.000386s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =13 )  [ RunTime:0.000343s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =13 )  [ RunTime:0.000307s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =13 )  [ RunTime:0.000205s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =6 )  [ RunTime:0.000223s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =6 )  [ RunTime:0.000241s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =6 )  [ RunTime:0.000234s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =10 )  [ RunTime:0.000228s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =10 )  [ RunTime:0.000248s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =10 )  [ RunTime:0.000263s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =3 )  [ RunTime:0.000549s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =3 )  [ RunTime:0.001118s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =3 )  [ RunTime:0.000310s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =7 )  [ RunTime:0.000263s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =7 )  [ RunTime:0.000246s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =7 )  [ RunTime:0.000301s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =11 )  [ RunTime:0.000305s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =11 )  [ RunTime:0.000751s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =11 )  [ RunTime:0.000324s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =4 )  [ RunTime:0.000345s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =4 )  [ RunTime:0.000330s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =4 )  [ RunTime:0.000346s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =8 )  [ RunTime:0.000613s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =8 )  [ RunTime:0.000485s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =8 )  [ RunTime:0.000540s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =12 )  [ RunTime:0.000576s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =12 )  [ RunTime:0.000379s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =12 )  [ RunTime:0.000414s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =5 )  [ RunTime:0.000411s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =5 )  [ RunTime:0.000387s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =5 )  [ RunTime:0.000262s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =9 )  [ RunTime:0.000201s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =9 )  [ RunTime:0.000244s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =9 )  [ RunTime:0.000204s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =6 )  [ RunTime:0.000278s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =6 )  [ RunTime:0.000234s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =6 )  [ RunTime:0.000205s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =10 )  [ RunTime:0.000231s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =10 )  [ RunTime:0.000197s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =10 )  [ RunTime:0.000228s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =3 )  [ RunTime:0.000241s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =3 )  [ RunTime:0.000274s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =3 )  [ RunTime:0.000340s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =7 )  [ RunTime:0.000311s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =7 )  [ RunTime:0.000306s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =7 )  [ RunTime:0.000231s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =11 )  [ RunTime:0.000240s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =11 )  [ RunTime:0.000217s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =11 )  [ RunTime:0.000231s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =4 )  [ RunTime:0.000224s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =4 )  [ RunTime:0.000237s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =4 )  [ RunTime:0.000226s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =8 )  [ RunTime:0.000338s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =8 )  [ RunTime:0.000337s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =8 )  [ RunTime:0.000177s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =12 )  [ RunTime:0.000265s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =12 )  [ RunTime:0.000174s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =12 )  [ RunTime:0.000208s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =5 )  [ RunTime:0.000203s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =5 )  [ RunTime:0.000196s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =5 )  [ RunTime:0.000212s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =9 )  [ RunTime:0.000491s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =9 )  [ RunTime:0.000329s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =9 )  [ RunTime:0.000907s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =13 )  [ RunTime:0.000445s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =13 )  [ RunTime:0.000549s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =13 )  [ RunTime:0.000670s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =6 )  [ RunTime:0.000750s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =6 )  [ RunTime:0.000342s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =6 )  [ RunTime:0.000261s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =10 )  [ RunTime:0.000396s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =10 )  [ RunTime:0.000382s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =10 )  [ RunTime:0.000662s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =3 )  [ RunTime:0.000434s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =3 )  [ RunTime:0.000896s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =3 )  [ RunTime:0.000550s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =7 )  [ RunTime:0.000425s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =7 )  [ RunTime:0.000578s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =7 )  [ RunTime:0.000589s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =11 )  [ RunTime:0.004106s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =11 )  [ RunTime:0.002576s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =11 )  [ RunTime:0.001891s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =4 )  [ RunTime:0.001548s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =4 )  [ RunTime:0.000319s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =4 )  [ RunTime:0.000219s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =8 )  [ RunTime:0.000294s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =8 )  [ RunTime:0.000400s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =8 )  [ RunTime:0.000273s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =12 )  [ RunTime:0.000327s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =12 )  [ RunTime:0.000763s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =12 )  [ RunTime:0.000334s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =5 )  [ RunTime:0.000250s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =5 )  [ RunTime:0.000662s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =5 )  [ RunTime:0.000312s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =9 )  [ RunTime:0.000239s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =9 )  [ RunTime:0.000209s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =9 )  [ RunTime:0.000191s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =13 )  [ RunTime:0.000213s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =13 )  [ RunTime:0.000468s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =13 )  [ RunTime:0.000240s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =6 )  [ RunTime:0.000229s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =6 )  [ RunTime:0.000338s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =6 )  [ RunTime:0.000431s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =10 )  [ RunTime:0.000407s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =10 )  [ RunTime:0.000590s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =10 )  [ RunTime:0.000706s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =3 )  [ RunTime:0.000452s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =3 )  [ RunTime:0.000324s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =3 )  [ RunTime:0.000612s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =7 )  [ RunTime:0.000601s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =7 )  [ RunTime:0.000273s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =7 )  [ RunTime:0.000225s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =11 )  [ RunTime:0.000198s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =11 )  [ RunTime:0.000198s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =11 )  [ RunTime:0.000174s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =4 )  [ RunTime:0.000399s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =4 )  [ RunTime:0.000307s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =4 )  [ RunTime:0.000199s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =8 )  [ RunTime:0.000243s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =8 )  [ RunTime:0.000332s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =8 )  [ RunTime:0.000325s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =12 )  [ RunTime:0.000318s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =12 )  [ RunTime:0.000279s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =12 )  [ RunTime:0.000245s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =5 )  [ RunTime:0.000256s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =5 )  [ RunTime:0.000254s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =5 )  [ RunTime:0.000234s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =9 )  [ RunTime:0.000245s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =9 )  [ RunTime:0.000241s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =9 )  [ RunTime:0.000238s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =13 )  [ RunTime:0.000352s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =13 )  [ RunTime:0.000317s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =13 )  [ RunTime:0.000185s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =13 )  [ RunTime:0.000174s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =13 )  [ RunTime:0.000158s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =13 )  [ RunTime:0.000157s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =6 )  [ RunTime:0.000162s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =6 )  [ RunTime:0.000159s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =6 )  [ RunTime:0.000232s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =10 )  [ RunTime:0.000441s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =10 )  [ RunTime:0.001004s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =10 )  [ RunTime:0.000325s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =3 )  [ RunTime:0.000270s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =3 )  [ RunTime:0.000218s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =3 )  [ RunTime:0.000318s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =7 )  [ RunTime:0.000339s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =7 )  [ RunTime:0.000560s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =7 )  [ RunTime:0.000518s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =11 )  [ RunTime:0.000580s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =11 )  [ RunTime:0.000756s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =11 )  [ RunTime:0.000377s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =4 )  [ RunTime:0.000517s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =4 )  [ RunTime:0.000806s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =4 )  [ RunTime:0.000643s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =8 )  [ RunTime:0.000494s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =8 )  [ RunTime:0.000503s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =8 )  [ RunTime:0.000511s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =12 )  [ RunTime:0.000473s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =12 )  [ RunTime:0.000242s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =12 )  [ RunTime:0.000195s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =5 )  [ RunTime:0.000216s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =5 )  [ RunTime:0.000190s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =5 )  [ RunTime:0.000267s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =9 )  [ RunTime:0.000231s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =9 )  [ RunTime:0.000192s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =9 )  [ RunTime:0.000232s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =5 )  [ RunTime:0.000259s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =5 )  [ RunTime:0.000302s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =5 )  [ RunTime:0.000295s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =9 )  [ RunTime:0.000320s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =9 )  [ RunTime:0.000239s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =9 )  [ RunTime:0.000185s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =13 )  [ RunTime:0.000197s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =13 )  [ RunTime:0.000180s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =13 )  [ RunTime:0.000170s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =6 )  [ RunTime:0.000203s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =6 )  [ RunTime:0.000331s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =6 )  [ RunTime:0.000318s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =10 )  [ RunTime:0.000261s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =10 )  [ RunTime:0.000204s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =10 )  [ RunTime:0.000239s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =3 )  [ RunTime:0.000248s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =3 )  [ RunTime:0.000191s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =3 )  [ RunTime:0.000193s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =7 )  [ RunTime:0.000208s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =7 )  [ RunTime:0.000224s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =7 )  [ RunTime:0.000180s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =11 )  [ RunTime:0.000215s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =11 )  [ RunTime:0.000255s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =11 )  [ RunTime:0.000399s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =4 )  [ RunTime:0.000286s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =4 )  [ RunTime:0.000467s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =4 )  [ RunTime:0.000652s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =8 )  [ RunTime:0.000647s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =8 )  [ RunTime:0.000208s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =8 )  [ RunTime:0.000209s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =12 )  [ RunTime:0.000523s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =12 )  [ RunTime:0.000323s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =12 )  [ RunTime:0.000284s ]
+
+[ 2016-05-27T22:38:37+08:00 ] ::1 /cookinggod/index.php/Home/user/tauserinfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000465s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000621s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000706s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.005917s ]
+SQL: SELECT `user_stur`,`user_herderimage`,`user_nickname`,`user_id` FROM `t_user` WHERE ( user_id=1 )  [ RunTime:0.000375s ]
+SQL: SHOW COLUMNS FROM `t_fans` [ RunTime:0.006040s ]
+SQL: SELECT * FROM `t_fans` WHERE ( user_id=1 )  [ RunTime:0.000325s ]
+SQL: SELECT * FROM `t_fans` WHERE ( user_fans=1 )  [ RunTime:0.000260s ]
+SQL: SHOW COLUMNS FROM t_shai,t_user [ RunTime:0.000201s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't_user' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM t_shai,t_user
+SQL: SELECT t_user.user_id,t_user.user_nickname,t_user.user_herderimage,t_shai.* FROM `t_shai`,`t_user` WHERE ( t_shai.user_id = t_user.user_id AND t_shai.user_id = 1 ) ORDER BY t_shai.shai_time desc  [ RunTime:0.003865s ]
+SQL: SHOW COLUMNS FROM `t_cookbook` [ RunTime:0.003946s ]
+SQL: SELECT `cookbook_name`,`cookbook_introduction`,`cookbook_image`,`cookbook_creattime`,`cookbook_id` FROM `t_cookbook` WHERE ( user_id = 1 ) ORDER BY cookbook_creattime desc  [ RunTime:0.000507s ]
+SQL: SHOW COLUMNS FROM t_user,t_detection [ RunTime:0.000166s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't_detection' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM t_user,t_detection
+SQL: SELECT t_user.user_id,t_user.user_nickname,t_user.user_herderimage,t_detection.* FROM `t_user`,`t_detection` WHERE ( t_user.user_id=t_detection.user_id AND t_detection.user_id = 1 ) ORDER BY detection_time desc  [ RunTime:0.000367s ]
+
+[ 2016-05-27T22:38:37+08:00 ] ::1 /cookinggod/index.php/Home/user/tauserinfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000411s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000537s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000619s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.004097s ]
+SQL: SELECT `user_stur`,`user_herderimage`,`user_nickname`,`user_id` FROM `t_user` WHERE ( user_id=1 )  [ RunTime:0.001604s ]
+SQL: SHOW COLUMNS FROM `t_fans` [ RunTime:0.002314s ]
+SQL: SELECT * FROM `t_fans` WHERE ( user_id=1 )  [ RunTime:0.000424s ]
+SQL: SELECT * FROM `t_fans` WHERE ( user_fans=1 )  [ RunTime:0.000817s ]
+SQL: SHOW COLUMNS FROM t_shai,t_user [ RunTime:0.000478s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't_user' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM t_shai,t_user
+SQL: SELECT t_user.user_id,t_user.user_nickname,t_user.user_herderimage,t_shai.* FROM `t_shai`,`t_user` WHERE ( t_shai.user_id = t_user.user_id AND t_shai.user_id = 1 ) ORDER BY t_shai.shai_time desc  [ RunTime:0.001569s ]
+SQL: SHOW COLUMNS FROM `t_cookbook` [ RunTime:0.004213s ]
+SQL: SELECT `cookbook_name`,`cookbook_introduction`,`cookbook_image`,`cookbook_creattime`,`cookbook_id` FROM `t_cookbook` WHERE ( user_id = 1 ) ORDER BY cookbook_creattime desc  [ RunTime:0.000397s ]
+SQL: SHOW COLUMNS FROM t_user,t_detection [ RunTime:0.000148s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't_detection' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM t_user,t_detection
+SQL: SELECT t_user.user_id,t_user.user_nickname,t_user.user_herderimage,t_detection.* FROM `t_user`,`t_detection` WHERE ( t_user.user_id=t_detection.user_id AND t_detection.user_id = 1 ) ORDER BY detection_time desc  [ RunTime:0.000440s ]
+
+[ 2016-05-27T22:38:37+08:00 ] ::1 /cookinggod/index.php/Home/user/attentions
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000482s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000638s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000734s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM t_user,t_fans [ RunTime:0.000227s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't_fans' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM t_user,t_fans
+SQL: SELECT t_user.user_nickname,t_user.user_herderimage,t_user.user_id FROM `t_user`,`t_fans` WHERE ( t_fans.user_fans=2 AND t_fans.user_id=t_user.user_id )  [ RunTime:0.000585s ]
+
+[ 2016-05-27T22:38:37+08:00 ] ::1 /cookinggod/index.php/Home/user/attentions
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000436s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000580s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000659s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM t_user,t_fans [ RunTime:0.000147s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't_fans' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM t_user,t_fans
+SQL: SELECT t_user.user_nickname,t_user.user_herderimage,t_user.user_id FROM `t_user`,`t_fans` WHERE ( t_fans.user_fans=2 AND t_fans.user_id=t_user.user_id )  [ RunTime:0.000384s ]
+
+[ 2016-05-27T22:39:11+08:00 ] ::1 /cookinggod/index.php/Home/user/deletefans
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000514s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000507s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000579s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `t_fans` [ RunTime:0.001796s ]
+SQL: SELECT * FROM `t_fans` WHERE ( user_fans = 2 AND user_id=1 )  [ RunTime:0.000354s ]
+SQL: INSERT INTO `t_fans` (`user_fans`,`user_id`) VALUES (2,1) [ RunTime:0.001175s ]
+
+[ 2016-05-27T22:39:12+08:00 ] ::1 /cookinggod/index.php/Home/user/tauserinfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000327s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000588s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000677s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.003451s ]
+SQL: SELECT `user_stur`,`user_herderimage`,`user_nickname`,`user_id` FROM `t_user` WHERE ( user_id=1 )  [ RunTime:0.000343s ]
+SQL: SHOW COLUMNS FROM `t_fans` [ RunTime:0.003438s ]
+SQL: SELECT * FROM `t_fans` WHERE ( user_id=1 )  [ RunTime:0.000940s ]
+SQL: SELECT * FROM `t_fans` WHERE ( user_fans=1 )  [ RunTime:0.000296s ]
+SQL: SHOW COLUMNS FROM t_shai,t_user [ RunTime:0.000164s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't_user' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM t_shai,t_user
+SQL: SELECT t_user.user_id,t_user.user_nickname,t_user.user_herderimage,t_shai.* FROM `t_shai`,`t_user` WHERE ( t_shai.user_id = t_user.user_id AND t_shai.user_id = 1 ) ORDER BY t_shai.shai_time desc  [ RunTime:0.000378s ]
+SQL: SHOW COLUMNS FROM `t_cookbook` [ RunTime:0.003635s ]
+SQL: SELECT `cookbook_name`,`cookbook_introduction`,`cookbook_image`,`cookbook_creattime`,`cookbook_id` FROM `t_cookbook` WHERE ( user_id = 1 ) ORDER BY cookbook_creattime desc  [ RunTime:0.001118s ]
+SQL: SHOW COLUMNS FROM t_user,t_detection [ RunTime:0.000190s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't_detection' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM t_user,t_detection
+SQL: SELECT t_user.user_id,t_user.user_nickname,t_user.user_herderimage,t_detection.* FROM `t_user`,`t_detection` WHERE ( t_user.user_id=t_detection.user_id AND t_detection.user_id = 1 ) ORDER BY detection_time desc  [ RunTime:0.001389s ]
+
+[ 2016-05-27T22:39:12+08:00 ] ::1 /cookinggod/index.php/Home/user/attentions
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000569s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000765s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000911s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM t_user,t_fans [ RunTime:0.000170s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't_fans' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM t_user,t_fans
+SQL: SELECT t_user.user_nickname,t_user.user_herderimage,t_user.user_id FROM `t_user`,`t_fans` WHERE ( t_fans.user_fans=2 AND t_fans.user_id=t_user.user_id )  [ RunTime:0.001113s ]
+
+[ 2016-05-27T22:39:13+08:00 ] ::1 /cookinggod/index.php/Home/user/deletefans
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000332s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000966s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001069s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `t_fans` [ RunTime:0.001807s ]
+SQL: SELECT * FROM `t_fans` WHERE ( user_fans = 2 AND user_id=1 )  [ RunTime:0.000279s ]
+SQL: DELETE FROM `t_fans` WHERE ( user_fans = 2 AND user_id=1 ) [ RunTime:0.000657s ]
+
+[ 2016-05-27T22:39:13+08:00 ] ::1 /cookinggod/index.php/Home/user/attentions
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000483s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000677s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000776s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM t_user,t_fans [ RunTime:0.000136s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't_fans' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM t_user,t_fans
+SQL: SELECT t_user.user_nickname,t_user.user_herderimage,t_user.user_id FROM `t_user`,`t_fans` WHERE ( t_fans.user_fans=2 AND t_fans.user_id=t_user.user_id )  [ RunTime:0.000601s ]
+
+[ 2016-05-27T22:39:13+08:00 ] ::1 /cookinggod/index.php/Home/user/tauserinfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000451s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000637s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000735s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.002923s ]
+SQL: SELECT `user_stur`,`user_herderimage`,`user_nickname`,`user_id` FROM `t_user` WHERE ( user_id=1 )  [ RunTime:0.000336s ]
+SQL: SHOW COLUMNS FROM `t_fans` [ RunTime:0.002107s ]
+SQL: SELECT * FROM `t_fans` WHERE ( user_id=1 )  [ RunTime:0.000384s ]
+SQL: SELECT * FROM `t_fans` WHERE ( user_fans=1 )  [ RunTime:0.000267s ]
+SQL: SHOW COLUMNS FROM t_shai,t_user [ RunTime:0.000171s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't_user' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM t_shai,t_user
+SQL: SELECT t_user.user_id,t_user.user_nickname,t_user.user_herderimage,t_shai.* FROM `t_shai`,`t_user` WHERE ( t_shai.user_id = t_user.user_id AND t_shai.user_id = 1 ) ORDER BY t_shai.shai_time desc  [ RunTime:0.000283s ]
+SQL: SHOW COLUMNS FROM `t_cookbook` [ RunTime:0.002021s ]
+SQL: SELECT `cookbook_name`,`cookbook_introduction`,`cookbook_image`,`cookbook_creattime`,`cookbook_id` FROM `t_cookbook` WHERE ( user_id = 1 ) ORDER BY cookbook_creattime desc  [ RunTime:0.000505s ]
+SQL: SHOW COLUMNS FROM t_user,t_detection [ RunTime:0.000132s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't_detection' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM t_user,t_detection
+SQL: SELECT t_user.user_id,t_user.user_nickname,t_user.user_herderimage,t_detection.* FROM `t_user`,`t_detection` WHERE ( t_user.user_id=t_detection.user_id AND t_detection.user_id = 1 ) ORDER BY detection_time desc  [ RunTime:0.000319s ]
+
+[ 2016-05-27T22:39:14+08:00 ] ::1 /cookinggod/index.php/Home/user/attentions
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000482s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000639s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000732s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM t_user,t_fans [ RunTime:0.000142s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't_fans' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM t_user,t_fans
+SQL: SELECT t_user.user_nickname,t_user.user_herderimage,t_user.user_id FROM `t_user`,`t_fans` WHERE ( t_fans.user_fans=1 AND t_fans.user_id=t_user.user_id )  [ RunTime:0.000392s ]
+
+[ 2016-05-27T22:39:14+08:00 ] ::1 /cookinggod/index.php/Home/user/attentions
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000340s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000453s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000516s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM t_user,t_fans [ RunTime:0.000384s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't_fans' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM t_user,t_fans
+SQL: SELECT t_user.user_nickname,t_user.user_herderimage,t_user.user_id FROM `t_user`,`t_fans` WHERE ( t_fans.user_fans=2 AND t_fans.user_id=t_user.user_id )  [ RunTime:0.000768s ]
+
+[ 2016-05-27T22:39:19+08:00 ] ::1 /cookinggod/index.php/Home/user/deletefans
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000439s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000465s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000537s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `t_fans` [ RunTime:0.003806s ]
+SQL: SELECT * FROM `t_fans` WHERE ( user_fans = 2 AND user_id=6 )  [ RunTime:0.000507s ]
+SQL: INSERT INTO `t_fans` (`user_fans`,`user_id`) VALUES (2,6) [ RunTime:0.001430s ]
+
+[ 2016-05-27T22:39:19+08:00 ] ::1 /cookinggod/index.php/Home/user/attentions
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000440s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000609s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000703s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM t_user,t_fans [ RunTime:0.000166s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't_fans' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM t_user,t_fans
+SQL: SELECT t_user.user_nickname,t_user.user_herderimage,t_user.user_id FROM `t_user`,`t_fans` WHERE ( t_fans.user_fans=1 AND t_fans.user_id=t_user.user_id )  [ RunTime:0.000389s ]
+
+[ 2016-05-27T22:39:19+08:00 ] ::1 /cookinggod/index.php/Home/user/attentions
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000050s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000758s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000611s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000698s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM t_user,t_fans [ RunTime:0.000215s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't_fans' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM t_user,t_fans
+SQL: SELECT t_user.user_nickname,t_user.user_herderimage,t_user.user_id FROM `t_user`,`t_fans` WHERE ( t_fans.user_fans=2 AND t_fans.user_id=t_user.user_id )  [ RunTime:0.000408s ]
+
+[ 2016-05-27T22:39:25+08:00 ] ::1 /cookinggod/index.php/Home/user/tauserinfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000570s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000792s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000899s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.005299s ]
+SQL: SELECT `user_stur`,`user_herderimage`,`user_nickname`,`user_id` FROM `t_user` WHERE ( user_id=1 )  [ RunTime:0.000400s ]
+SQL: SHOW COLUMNS FROM `t_fans` [ RunTime:0.002469s ]
+SQL: SELECT * FROM `t_fans` WHERE ( user_id=1 )  [ RunTime:0.000492s ]
+SQL: SELECT * FROM `t_fans` WHERE ( user_fans=1 )  [ RunTime:0.000308s ]
+SQL: SHOW COLUMNS FROM t_shai,t_user [ RunTime:0.000269s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't_user' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM t_shai,t_user
+SQL: SELECT t_user.user_id,t_user.user_nickname,t_user.user_herderimage,t_shai.* FROM `t_shai`,`t_user` WHERE ( t_shai.user_id = t_user.user_id AND t_shai.user_id = 1 ) ORDER BY t_shai.shai_time desc  [ RunTime:0.000507s ]
+SQL: SHOW COLUMNS FROM `t_cookbook` [ RunTime:0.001986s ]
+SQL: SELECT `cookbook_name`,`cookbook_introduction`,`cookbook_image`,`cookbook_creattime`,`cookbook_id` FROM `t_cookbook` WHERE ( user_id = 1 ) ORDER BY cookbook_creattime desc  [ RunTime:0.000296s ]
+SQL: SHOW COLUMNS FROM t_user,t_detection [ RunTime:0.000108s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't_detection' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM t_user,t_detection
+SQL: SELECT t_user.user_id,t_user.user_nickname,t_user.user_herderimage,t_detection.* FROM `t_user`,`t_detection` WHERE ( t_user.user_id=t_detection.user_id AND t_detection.user_id = 1 ) ORDER BY detection_time desc  [ RunTime:0.000263s ]
+
+[ 2016-05-27T22:39:25+08:00 ] ::1 /cookinggod/index.php/Home/user/attentions
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000465s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000663s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000766s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM t_user,t_fans [ RunTime:0.000169s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't_fans' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM t_user,t_fans
+SQL: SELECT t_user.user_nickname,t_user.user_herderimage,t_user.user_id FROM `t_user`,`t_fans` WHERE ( t_fans.user_fans=2 AND t_fans.user_id=t_user.user_id )  [ RunTime:0.000480s ]
+
+[ 2016-05-27T22:39:27+08:00 ] ::1 /cookinggod/index.php/Home/user/attentions
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000432s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000439s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000503s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM t_user,t_fans [ RunTime:0.000296s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't_fans' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM t_user,t_fans
+SQL: SELECT t_user.user_nickname,t_user.user_herderimage,t_user.user_id FROM `t_user`,`t_fans` WHERE ( t_fans.user_fans=2 AND t_fans.user_id=t_user.user_id )  [ RunTime:0.000787s ]
+
+[ 2016-05-27T22:39:27+08:00 ] ::1 /cookinggod/index.php/Home/user/fans
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000327s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000409s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000462s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM t_user,t_fans [ RunTime:0.000136s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't_fans' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM t_user,t_fans
+SQL: SELECT t_user.user_nickname,t_user.user_herderimage,t_user.user_id FROM `t_user`,`t_fans` WHERE ( t_fans.user_fans=t_user.user_id AND t_fans.user_id=1 )  [ RunTime:0.000258s ]
+
+[ 2016-05-27T22:39:28+08:00 ] ::1 /cookinggod/index.php/Home/user/attentions
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000449s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000600s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000675s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM t_user,t_fans [ RunTime:0.000118s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't_fans' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM t_user,t_fans
+SQL: SELECT t_user.user_nickname,t_user.user_herderimage,t_user.user_id FROM `t_user`,`t_fans` WHERE ( t_fans.user_fans=2 AND t_fans.user_id=t_user.user_id )  [ RunTime:0.000566s ]
+
+[ 2016-05-27T22:39:28+08:00 ] ::1 /cookinggod/index.php/Home/user/tauserinfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000444s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000585s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000661s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.004401s ]
+SQL: SELECT `user_stur`,`user_herderimage`,`user_nickname`,`user_id` FROM `t_user` WHERE ( user_id=1 )  [ RunTime:0.000631s ]
+SQL: SHOW COLUMNS FROM `t_fans` [ RunTime:0.002138s ]
+SQL: SELECT * FROM `t_fans` WHERE ( user_id=1 )  [ RunTime:0.000324s ]
+SQL: SELECT * FROM `t_fans` WHERE ( user_fans=1 )  [ RunTime:0.000268s ]
+SQL: SHOW COLUMNS FROM t_shai,t_user [ RunTime:0.000137s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't_user' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM t_shai,t_user
+SQL: SELECT t_user.user_id,t_user.user_nickname,t_user.user_herderimage,t_shai.* FROM `t_shai`,`t_user` WHERE ( t_shai.user_id = t_user.user_id AND t_shai.user_id = 1 ) ORDER BY t_shai.shai_time desc  [ RunTime:0.000358s ]
+SQL: SHOW COLUMNS FROM `t_cookbook` [ RunTime:0.002330s ]
+SQL: SELECT `cookbook_name`,`cookbook_introduction`,`cookbook_image`,`cookbook_creattime`,`cookbook_id` FROM `t_cookbook` WHERE ( user_id = 1 ) ORDER BY cookbook_creattime desc  [ RunTime:0.000353s ]
+SQL: SHOW COLUMNS FROM t_user,t_detection [ RunTime:0.000255s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't_detection' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM t_user,t_detection
+SQL: SELECT t_user.user_id,t_user.user_nickname,t_user.user_herderimage,t_detection.* FROM `t_user`,`t_detection` WHERE ( t_user.user_id=t_detection.user_id AND t_detection.user_id = 1 ) ORDER BY detection_time desc  [ RunTime:0.000295s ]
+
+[ 2016-05-27T22:39:31+08:00 ] ::1 /cookinggod/index.php/Home/user/userdetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000456s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000612s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000708s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.002104s ]
+SQL: SELECT * FROM `t_user` WHERE ( user_id=2 )  [ RunTime:0.000277s ]
+SQL: SHOW COLUMNS FROM `t_fans` [ RunTime:0.001929s ]
+SQL: SELECT * FROM `t_fans` WHERE ( user_id=2 )  [ RunTime:0.000337s ]
+SQL: SELECT * FROM `t_fans` WHERE ( user_fans=2 )  [ RunTime:0.000281s ]
+
+[ 2016-05-27T22:39:31+08:00 ] ::1 /cookinggod/index.php/Home/user/userdetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000470s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000440s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000504s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.003587s ]
+SQL: SELECT * FROM `t_user` WHERE ( user_id=2 )  [ RunTime:0.000492s ]
+SQL: SHOW COLUMNS FROM `t_fans` [ RunTime:0.002071s ]
+SQL: SELECT * FROM `t_fans` WHERE ( user_id=2 )  [ RunTime:0.000335s ]
+SQL: SELECT * FROM `t_fans` WHERE ( user_fans=2 )  [ RunTime:0.000327s ]
+
+[ 2016-05-27T22:39:33+08:00 ] ::1 /cookinggod/index.php/Home/user/attentions
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000444s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000572s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000650s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM t_user,t_fans [ RunTime:0.000333s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't_fans' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM t_user,t_fans
+SQL: SELECT t_user.user_nickname,t_user.user_herderimage,t_user.user_id FROM `t_user`,`t_fans` WHERE ( t_fans.user_fans=2 AND t_fans.user_id=t_user.user_id )  [ RunTime:0.000854s ]
+
+[ 2016-05-27T22:39:33+08:00 ] ::1 /cookinggod/index.php/Home/user/attentions
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000444s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000601s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000679s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM t_user,t_fans [ RunTime:0.000121s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't_fans' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM t_user,t_fans
+SQL: SELECT t_user.user_nickname,t_user.user_herderimage,t_user.user_id FROM `t_user`,`t_fans` WHERE ( t_fans.user_fans=2 AND t_fans.user_id=t_user.user_id )  [ RunTime:0.000345s ]
+
+[ 2016-05-27T22:39:34+08:00 ] ::1 /cookinggod/index.php/Home/user/userdetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000414s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000434s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000495s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.002413s ]
+SQL: SELECT * FROM `t_user` WHERE ( user_id=2 )  [ RunTime:0.000981s ]
+SQL: SHOW COLUMNS FROM `t_fans` [ RunTime:0.002834s ]
+SQL: SELECT * FROM `t_fans` WHERE ( user_id=2 )  [ RunTime:0.000351s ]
+SQL: SELECT * FROM `t_fans` WHERE ( user_fans=2 )  [ RunTime:0.000247s ]
+
+[ 2016-05-27T22:39:35+08:00 ] ::1 /cookinggod/index.php/Home/user/attentions
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000424s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000561s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000638s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM t_user,t_fans [ RunTime:0.000303s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't_fans' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM t_user,t_fans
+SQL: SELECT t_user.user_nickname,t_user.user_herderimage,t_user.user_id FROM `t_user`,`t_fans` WHERE ( t_fans.user_fans=2 AND t_fans.user_id=t_user.user_id )  [ RunTime:0.000430s ]
+
+[ 2016-05-27T22:39:35+08:00 ] ::1 /cookinggod/index.php/Home/user/fans
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000421s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000643s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000762s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM t_user,t_fans [ RunTime:0.000128s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't_fans' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM t_user,t_fans
+SQL: SELECT t_user.user_nickname,t_user.user_herderimage,t_user.user_id FROM `t_user`,`t_fans` WHERE ( t_fans.user_fans=t_user.user_id AND t_fans.user_id=2 )  [ RunTime:0.000332s ]
+
+[ 2016-05-27T22:39:36+08:00 ] ::1 /cookinggod/index.php/Home/user/userdetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000596s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000553s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000623s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.003706s ]
+SQL: SELECT * FROM `t_user` WHERE ( user_id=2 )  [ RunTime:0.000515s ]
+SQL: SHOW COLUMNS FROM `t_fans` [ RunTime:0.003427s ]
+SQL: SELECT * FROM `t_fans` WHERE ( user_id=2 )  [ RunTime:0.000839s ]
+SQL: SELECT * FROM `t_fans` WHERE ( user_fans=2 )  [ RunTime:0.000633s ]
+
+[ 2016-05-27T22:39:37+08:00 ] ::1 /cookinggod/index.php/Home/user/mycook?userid=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000455s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000437s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000496s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `t_cookbook` [ RunTime:0.004573s ]
+SQL: SELECT `cookbook_id`,`cookbook_name`,`cookbook_image` FROM `t_cookbook` WHERE ( t_cookbook.user_id = 2 )  [ RunTime:0.001873s ]
+SQL: SHOW COLUMNS FROM `t_material` [ RunTime:0.003894s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =4 )  [ RunTime:0.000472s ]
+SQL: SHOW COLUMNS FROM `t_collectionnumber` [ RunTime:0.003005s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =4 )  [ RunTime:0.000510s ]
+SQL: SHOW COLUMNS FROM `t_browsenumber` [ RunTime:0.002000s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =4 )  [ RunTime:0.000476s ]
+
+[ 2016-05-27T22:39:38+08:00 ] ::1 /cookinggod/index.php/Home/user/userdetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000376s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000414s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000469s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.004493s ]
+SQL: SELECT * FROM `t_user` WHERE ( user_id=2 )  [ RunTime:0.000385s ]
+SQL: SHOW COLUMNS FROM `t_fans` [ RunTime:0.002684s ]
+SQL: SELECT * FROM `t_fans` WHERE ( user_id=2 )  [ RunTime:0.000339s ]
+SQL: SELECT * FROM `t_fans` WHERE ( user_fans=2 )  [ RunTime:0.000798s ]
+
+[ 2016-05-27T22:39:39+08:00 ] ::1 /cookinggod/index.php/Home/user/mydetection
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000426s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000489s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000557s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM t_user,t_detection [ RunTime:0.000136s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't_detection' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM t_user,t_detection
+SQL: SELECT t_user.user_id,t_user.user_nickname,t_user.user_herderimage,t_detection.* FROM `t_user`,`t_detection` WHERE ( t_user.user_id=t_detection.user_id AND t_detection.user_id = 2 ) ORDER BY detection_time desc  [ RunTime:0.000306s ]
+SQL: SHOW COLUMNS FROM `t_detectioncell` [ RunTime:0.001903s ]
+SQL: SELECT * FROM `t_detectioncell` WHERE ( detection_id=33 )  [ RunTime:0.000251s ]
+
+[ 2016-05-27T22:39:41+08:00 ] ::1 /cookinggod/index.php/Home/user/userdetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000326s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000418s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000471s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.002940s ]
+SQL: SELECT * FROM `t_user` WHERE ( user_id=2 )  [ RunTime:0.000391s ]
+SQL: SHOW COLUMNS FROM `t_fans` [ RunTime:0.001968s ]
+SQL: SELECT * FROM `t_fans` WHERE ( user_id=2 )  [ RunTime:0.000360s ]
+SQL: SELECT * FROM `t_fans` WHERE ( user_fans=2 )  [ RunTime:0.000274s ]
+
+[ 2016-05-27T22:39:41+08:00 ] ::1 /cookinggod/index.php/Home/user/zuop
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000627s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000519s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000581s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM t_user,t_shai [ RunTime:0.000144s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't_shai' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM t_user,t_shai
+SQL: SELECT t_user.user_id,t_user.user_nickname,t_user.user_herderimage,t_shai.* FROM `t_user`,`t_shai` WHERE ( t_shai.user_id = 2 AND t_user.user_id = t_shai.user_id ) ORDER BY shai_time desc  [ RunTime:0.000616s ]
+
+[ 2016-05-27T22:39:43+08:00 ] ::1 /cookinggod/index.php/Home/user/userdetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000597s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000630s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000712s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.001995s ]
+SQL: SELECT * FROM `t_user` WHERE ( user_id=2 )  [ RunTime:0.000597s ]
+SQL: SHOW COLUMNS FROM `t_fans` [ RunTime:0.002659s ]
+SQL: SELECT * FROM `t_fans` WHERE ( user_id=2 )  [ RunTime:0.000286s ]
+SQL: SELECT * FROM `t_fans` WHERE ( user_fans=2 )  [ RunTime:0.000200s ]
+
+[ 2016-05-27T22:39:45+08:00 ] ::1 /cookinggod/index.php/Home/cookbook/mycollection
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000305s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000414s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000470s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM t_collection,t_cookbook [ RunTime:0.000140s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't_cookbook' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM t_collection,t_cookbook
+SQL: SELECT t_cookbook.cookbook_id,t_cookbook.cookbook_name,t_cookbook.cookbook_image FROM `t_collection`,`t_cookbook` WHERE ( t_collection.user_id=2 and t_cookbook.cookbook_id = t_collection.cookbook_id )  [ RunTime:0.003086s ]
+SQL: SHOW COLUMNS FROM `t_material` [ RunTime:0.002338s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =8 )  [ RunTime:0.000524s ]
+SQL: SHOW COLUMNS FROM `t_collectionnumber` [ RunTime:0.002315s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =8 )  [ RunTime:0.000211s ]
+SQL: SHOW COLUMNS FROM `t_browsenumber` [ RunTime:0.001897s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =8 )  [ RunTime:0.000592s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =6 )  [ RunTime:0.000551s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =6 )  [ RunTime:0.000513s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =6 )  [ RunTime:0.000304s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =10 )  [ RunTime:0.000320s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =10 )  [ RunTime:0.000330s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =10 )  [ RunTime:0.000280s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id =13 )  [ RunTime:0.000265s ]
+SQL: SELECT * FROM `t_collectionnumber` WHERE ( cookbook_id =13 )  [ RunTime:0.000345s ]
+SQL: SELECT * FROM `t_browsenumber` WHERE ( cookbook_id =13 )  [ RunTime:0.000236s ]
+
+[ 2016-05-27T22:40:01+08:00 ] ::1 /cookinggod/index.php/Home/user/userdetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000461s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000418s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000473s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.003566s ]
+SQL: SELECT * FROM `t_user` WHERE ( user_id=2 )  [ RunTime:0.000356s ]
+SQL: SHOW COLUMNS FROM `t_fans` [ RunTime:0.003020s ]
+SQL: SELECT * FROM `t_fans` WHERE ( user_id=2 )  [ RunTime:0.000396s ]
+SQL: SELECT * FROM `t_fans` WHERE ( user_fans=2 )  [ RunTime:0.000237s ]
+
+[ 2016-05-27T22:40:03+08:00 ] ::1 /cookinggod/index.php/Home/user/tauserinfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000474s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000718s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000812s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.003722s ]
+SQL: SELECT `user_stur`,`user_herderimage`,`user_nickname`,`user_id` FROM `t_user` WHERE ( user_id=1 )  [ RunTime:0.000496s ]
+SQL: SHOW COLUMNS FROM `t_fans` [ RunTime:0.002112s ]
+SQL: SELECT * FROM `t_fans` WHERE ( user_id=1 )  [ RunTime:0.000361s ]
+SQL: SELECT * FROM `t_fans` WHERE ( user_fans=1 )  [ RunTime:0.000226s ]
+SQL: SHOW COLUMNS FROM t_shai,t_user [ RunTime:0.000132s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't_user' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM t_shai,t_user
+SQL: SELECT t_user.user_id,t_user.user_nickname,t_user.user_herderimage,t_shai.* FROM `t_shai`,`t_user` WHERE ( t_shai.user_id = t_user.user_id AND t_shai.user_id = 1 ) ORDER BY t_shai.shai_time desc  [ RunTime:0.000750s ]
+SQL: SHOW COLUMNS FROM `t_cookbook` [ RunTime:0.003630s ]
+SQL: SELECT `cookbook_name`,`cookbook_introduction`,`cookbook_image`,`cookbook_creattime`,`cookbook_id` FROM `t_cookbook` WHERE ( user_id = 1 ) ORDER BY cookbook_creattime desc  [ RunTime:0.000626s ]
+SQL: SHOW COLUMNS FROM t_user,t_detection [ RunTime:0.000504s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't_detection' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM t_user,t_detection
+SQL: SELECT t_user.user_id,t_user.user_nickname,t_user.user_herderimage,t_detection.* FROM `t_user`,`t_detection` WHERE ( t_user.user_id=t_detection.user_id AND t_detection.user_id = 1 ) ORDER BY detection_time desc  [ RunTime:0.000488s ]
+
+[ 2016-05-27T22:40:03+08:00 ] ::1 /cookinggod/index.php/Home/user/attentions
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000878s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000937s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001672s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM t_user,t_fans [ RunTime:0.000190s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't_fans' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM t_user,t_fans
+SQL: SELECT t_user.user_nickname,t_user.user_herderimage,t_user.user_id FROM `t_user`,`t_fans` WHERE ( t_fans.user_fans=2 AND t_fans.user_id=t_user.user_id )  [ RunTime:0.000376s ]
+
+[ 2016-05-27T22:40:03+08:00 ] ::1 /cookinggod/index.php/Home/user/attentions
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000460s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000705s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000804s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM t_user,t_fans [ RunTime:0.000327s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't_fans' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM t_user,t_fans
+SQL: SELECT t_user.user_nickname,t_user.user_herderimage,t_user.user_id FROM `t_user`,`t_fans` WHERE ( t_fans.user_fans=2 AND t_fans.user_id=t_user.user_id )  [ RunTime:0.000449s ]
+
+[ 2016-05-27T22:40:03+08:00 ] ::1 /cookinggod/index.php/Home/user/tauserinfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000531s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001113s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001227s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.004058s ]
+SQL: SELECT `user_stur`,`user_herderimage`,`user_nickname`,`user_id` FROM `t_user` WHERE ( user_id=1 )  [ RunTime:0.000887s ]
+SQL: SHOW COLUMNS FROM `t_fans` [ RunTime:0.003704s ]
+SQL: SELECT * FROM `t_fans` WHERE ( user_id=1 )  [ RunTime:0.000360s ]
+SQL: SELECT * FROM `t_fans` WHERE ( user_fans=1 )  [ RunTime:0.000356s ]
+SQL: SHOW COLUMNS FROM t_shai,t_user [ RunTime:0.000158s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't_user' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM t_shai,t_user
+SQL: SELECT t_user.user_id,t_user.user_nickname,t_user.user_herderimage,t_shai.* FROM `t_shai`,`t_user` WHERE ( t_shai.user_id = t_user.user_id AND t_shai.user_id = 1 ) ORDER BY t_shai.shai_time desc  [ RunTime:0.000346s ]
+SQL: SHOW COLUMNS FROM `t_cookbook` [ RunTime:0.002205s ]
+SQL: SELECT `cookbook_name`,`cookbook_introduction`,`cookbook_image`,`cookbook_creattime`,`cookbook_id` FROM `t_cookbook` WHERE ( user_id = 1 ) ORDER BY cookbook_creattime desc  [ RunTime:0.000389s ]
+SQL: SHOW COLUMNS FROM t_user,t_detection [ RunTime:0.000147s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't_detection' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM t_user,t_detection
+SQL: SELECT t_user.user_id,t_user.user_nickname,t_user.user_herderimage,t_detection.* FROM `t_user`,`t_detection` WHERE ( t_user.user_id=t_detection.user_id AND t_detection.user_id = 1 ) ORDER BY detection_time desc  [ RunTime:0.000326s ]
+
+[ 2016-05-27T22:40:06+08:00 ] ::1 /cookinggod/index.php/Home/cookbook/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000535s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000653s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000761s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM t_user,t_cookbook [ RunTime:0.000172s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't_cookbook' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM t_user,t_cookbook
+SQL: SELECT * FROM `t_user`,`t_cookbook` WHERE ( t_user.user_id=t_cookbook.user_id AND t_cookbook.cookbook_id=3 )  [ RunTime:0.000504s ]
+SQL: SHOW COLUMNS FROM `t_material` [ RunTime:0.004305s ]
+SQL: SELECT * FROM `t_material` WHERE ( cookbook_id=3 )  [ RunTime:0.000424s ]
+SQL: SHOW COLUMNS FROM `t_process` [ RunTime:0.003684s ]
+SQL: SELECT `process_step`,`process_image`,`process_content` FROM `t_process` WHERE ( cookbook_id=3 )  [ RunTime:0.000427s ]
+SQL: SHOW COLUMNS FROM t_user,t_comment [ RunTime:0.000139s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't_comment' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM t_user,t_comment
+SQL: SELECT t_user.user_nickname,t_user.user_herderimage,t_comment.comment_time,t_comment.comment_body FROM `t_user`,`t_comment` WHERE ( t_comment.cookbook_id=3 AND t_user.user_id=t_comment.user_id ) ORDER BY comment_time desc  [ RunTime:0.002759s ]
+SQL: SHOW COLUMNS FROM `t_browsenumber` [ RunTime:0.002206s ]
+SQL: UPDATE `t_browsenumber` SET `browsenumber_number`=browsenumber_number+1 WHERE ( cookbook_id = 3 ) [ RunTime:0.001983s ]
+
+[ 2016-05-27T22:40:16+08:00 ] ::1 /cookinggod/index.php/Home/user/tauserinfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000471s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000940s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001059s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.001843s ]
+SQL: SELECT `user_stur`,`user_herderimage`,`user_nickname`,`user_id` FROM `t_user` WHERE ( user_id=1 )  [ RunTime:0.000248s ]
+SQL: SHOW COLUMNS FROM `t_fans` [ RunTime:0.001723s ]
+SQL: SELECT * FROM `t_fans` WHERE ( user_id=1 )  [ RunTime:0.000264s ]
+SQL: SELECT * FROM `t_fans` WHERE ( user_fans=1 )  [ RunTime:0.000214s ]
+SQL: SHOW COLUMNS FROM t_shai,t_user [ RunTime:0.000105s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't_user' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM t_shai,t_user
+SQL: SELECT t_user.user_id,t_user.user_nickname,t_user.user_herderimage,t_shai.* FROM `t_shai`,`t_user` WHERE ( t_shai.user_id = t_user.user_id AND t_shai.user_id = 1 ) ORDER BY t_shai.shai_time desc  [ RunTime:0.000230s ]
+SQL: SHOW COLUMNS FROM `t_cookbook` [ RunTime:0.002118s ]
+SQL: SELECT `cookbook_name`,`cookbook_introduction`,`cookbook_image`,`cookbook_creattime`,`cookbook_id` FROM `t_cookbook` WHERE ( user_id = 1 ) ORDER BY cookbook_creattime desc  [ RunTime:0.000318s ]
+SQL: SHOW COLUMNS FROM t_user,t_detection [ RunTime:0.000088s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't_detection' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM t_user,t_detection
+SQL: SELECT t_user.user_id,t_user.user_nickname,t_user.user_herderimage,t_detection.* FROM `t_user`,`t_detection` WHERE ( t_user.user_id=t_detection.user_id AND t_detection.user_id = 1 ) ORDER BY detection_time desc  [ RunTime:0.000245s ]
+
+[ 2016-05-27T22:40:16+08:00 ] ::1 /cookinggod/index.php/Home/user/attentions
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000057s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001477s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000857s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000945s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM t_user,t_fans [ RunTime:0.000460s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't_fans' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM t_user,t_fans
+SQL: SELECT t_user.user_nickname,t_user.user_herderimage,t_user.user_id FROM `t_user`,`t_fans` WHERE ( t_fans.user_fans=2 AND t_fans.user_id=t_user.user_id )  [ RunTime:0.000522s ]
+

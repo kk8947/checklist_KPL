@@ -1,0 +1,14 @@
+[ 2015-12-11T10:44:37+08:00 ] ::1 /CookingGod/index.php/Home/user/userdetail?userid=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000712s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001637s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001744s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.004265s ]
+SQL: SELECT * FROM `t_user` WHERE ( user_id=1 )  [ RunTime:0.000444s ]
+SQL: SHOW COLUMNS FROM `t_fans` [ RunTime:0.003184s ]
+SQL: SELECT * FROM `t_fans` WHERE ( user_id=1 )  [ RunTime:0.000358s ]
+SQL: SELECT * FROM `t_fans` WHERE ( user_fans=1 )  [ RunTime:0.000236s ]
+

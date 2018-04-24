@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>公共信号赛前</title>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<script src="../js/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="../js/jquery-ui-11.4/jquery-ui.min.js"></script>
+	<link rel="stylesheet" href="../js/jquery-ui-11.4/jquery-ui.theme.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/font_googleapis.css">
+	<!-- <link rel="stylesheet" type="text/css" href="../css/normalize.css" /> -->
+	<link rel="stylesheet" type="text/css" href="../css/mycss.css">
+	<link rel="stylesheet" type="text/css" href="../fonts/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/animate.css">
+	<link rel="stylesheet" href="../css/dialog.css" type="text/css">
+	<link rel="stylesheet" href="../dist/noticejs.css" />
+	<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/b.dialog.bootstrap3.css" type="text/css">
+	<script type="text/javascript" src="../js/b.dialog.js" ></script>
+	<script type="text/javascript" src="../js/b.dialog.min.js"></script>
+	<script type="text/javascript" src="../js/tabulator.js"></script>
+	<script type="text/javascript" src="../js/Utility.js"></script>
+	<script type="text/javascript" src="../bootstrap/js/bootstrap.js"></script>
+	<script src="../dist/notice.js"></script>
+	<script type="text/javascript">
+	var is_no = 0;
+	var tabledata = [
+	{id:1,resp_per:"房苏越",region:"转播车",inspect:"1、转播车14:00开门",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:85},
+	{id:2,resp_per:"房苏越",region:"转播车",inspect:"2、直播岗人员每日14:00点到岗",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:86},
+	{id:3,resp_per:"房苏越",region:"转播车",inspect:"3、直播期间专人专岗，不串岗、不脱岗",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:87},
+	{id:4,resp_per:"房苏越",region:"转播车",inspect:"4、直播期间手机调振动提醒",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:88},
+	{id:5,resp_per:"房苏越",region:"转播车",inspect:"5、直播在岗期间禁食，水",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:89},
+	{id:6,resp_per:"房苏越",region:"转播车",inspect:"6、转播车与后台无垃圾纸屑",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:90},
+	{id:7,resp_per:"房苏越",region:"转播车",inspect:"7、转播车与后台无闲杂外来人员",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:91},
+	{id:8,resp_per:"房苏越",region:"转播车",inspect:"8、转播车网、电正常，室温18℃-23℃",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:92},
+	{id:9,resp_per:"房苏越",region:"转播车",inspect:"9、首发名单表单、每日积分表单、打印",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:93},
+	{id:10,resp_per:"房苏越",region:"转播车",inspect:"10、提醒内容组将SSD插入录机并检查信号是否正常",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:94},
+	{id:11,resp_per:"房苏越",region:"切换台（Ross）",inspect:"1、所有信号源检测（32路），信号源、帧同步正常稳定、各信号源色彩白平衡标准统一",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:95},
+	{id:12,resp_per:"房苏越",region:"切换台（Ross）",inspect:"2、当日比赛对阵转场导入、检查该转场牵涉相应场景中转场宏调用（每场都有红蓝边）",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:96},
+	{id:13,resp_per:"房苏越",region:"切换台（Ross）",inspect:"3、宏命令检测运行（BP、游戏信号源画中画、装备面板、经济经验面板、游戏回现场）",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:97},
+	{id:14,resp_per:"房苏越",region:"切换台（Ross）",inspect:"4、Memory场景检测、调用（直播倒计时、精彩回放、游戏内摄像头&装备栏上下、王者时刻、赛后装备伤害占比）",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:98},
+	{id:15,resp_per:"房苏越",region:"切换台（Ross）",inspect:"5、所有工作岗位耳包、对讲机通话测试：大屏、灯光、音控、推流",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:99},
+	{id:16,resp_per:"房苏越",region:"切换台（Ross）",inspect:"6、选手摄像头调整为水平状态",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:100},
+	{id:17,resp_per:"房苏越",region:"切换台（Ross）",inspect:"7、成都信号校准、官流信号确认",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:101},
+	{id:18,resp_per:"XC",region:"3Play",inspect:"1、3Play输入信号正常（公共信号PGM、OB1、OB2、Cam1-Cam5）",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:102},
+	{id:19,resp_per:"XC",region:"3Play",inspect:"2、颜色校准（与OB1 OB2匹配）",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:103},
+	{id:20,resp_per:"XC",region:"3Play",inspect:"3、3Play输出信号正常",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:104},
+	{id:21,resp_per:"王玉",region:"OB",inspect:"1、OB设备维护正常，版本确认无更新无通知，电量满，设备无卡顿死机接触不良",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:105},
+	{id:22,resp_per:"王玉",region:"OB",inspect:"2、OB客户端版本正常",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:106},
+	{id:23,resp_per:"王玉",region:"OB",inspect:"3、OB信号输入正常",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:107},
+	{id:24,resp_per:"王玉",region:"OB",inspect:"4、音频测试正常",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:108},
+	{id:25,resp_per:"王玉",region:"OB",inspect:"5、OB游戏内设置统一，亮度颜色正常",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:109},
+	{id:26,resp_per:"王玉",region:"OB",inspect:"6、OB网络状态测试良好无延迟无卡顿无丢包掉帧",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:110},
+	{id:27,resp_per:"王玉",region:"OB",inspect:"7、OB颜色参数显示正常、无花屏",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:111},
+	{id:28,resp_per:"王玉",region:"OB",inspect:"8、OB 连接线路是否正常",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:112},
+	{id:29,resp_per:"王玉",region:"OB",inspect:"9、OB机删除IOS更新文件",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:113},
+	{id:30,resp_per:"王玉",region:"OB",inspect:"10、确认引导式访问开启并工作正常",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:114},
+	];
+
+	var tabledata2 = [
+	{id:31,resp_per:"房苏越",region:"切换台（Ross）",inspect:"1、所有信号源检测（32路），信号源、帧同步正常稳定、各信号源色彩白平衡标准统一",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:115},
+	{id:32,resp_per:"房苏越",region:"切换台（Ross）",inspect:"2、当日比赛对阵转场导入、检查该转场牵涉相应场景中转场宏调用（每场都有红蓝边）",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:116},
+	{id:33,resp_per:"房苏越",region:"切换台（Ross）",inspect:"3、宏命令检测运行（BP、游戏信号源画中画、装备面板、经济经验面板、游戏回现场）",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:117},
+	{id:34,resp_per:"房苏越",region:"切换台（Ross）",inspect:"4、Memory场景检测、调用（直播倒计时、精彩回放、游戏内摄像头&装备栏上下、王者时刻、赛后装备伤害占比）",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:118},
+	{id:35,resp_per:"房苏越",region:"切换台（Ross）",inspect:"5、选手摄像头调整为水平状态",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:119},
+	{id:36,resp_per:"XC",region:"3Play",inspect:"1、3Play输入信号正常（公共信号PGM、OB1、OB2、Cam1-Cam5）",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:120},
+	{id:37,resp_per:"XC",region:"3Play",inspect:"2、3Play输出信号正常",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:121},
+	{id:38,resp_per:"XC",region:"H5",inspect:"1、BP H5页面比例、位置输出正常，与切换台导播协调完成、确认BP场景位置、比例",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:122},
+	];
+	</script>
+</head>
+<body>
+	<ul class="nav nav-pills">
+	<li class="dropdown all-camera-dropdown">
+		<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+			选择签到表
+			<b class="caret"></b>
+		</a>
+		<ul class="dropdown-menu">
+			<li><a href="../index.html">游击Check</a></li>
+			<li><a href="../view/AV_Console_screen.html">AV控台区 大屏</a></li>
+			<li><a href="../view/AV_Console_lighting.html">AV控台区 灯光</a></li>
+			<li><a href="../view/Public_signal_subtitle.html">公共信号字幕</a></li>
+			<li><a href="../view/Public_signal_after.html">公共信号赛后</a></li>
+			<li><a href="../view/Public_signal_audio.html">公共信号音频</a></li>
+			<li><a href="../view/Push_flow.html">推流</a></li>
+			<li><a href="../view/Push_flow_one.html">推流周期1</a></li>
+			<li><a href="../view/Push_flow_two.html">推流周期2</a></li>
+			<li><a href="../view/Push_flow_three.html">推流周期3</a></li>
+			<li><a href="../view/Push_flow_four.html">推流周期4</a></li>
+			<li><a href="../view/Match_before.html">赛事赛前</a></li>
+			<li><a href="../view/Match_playing.html">赛事进行</a></li>
+			<li><a href="../view/Match_after.html">赛事赛后</a></li>
+			<li><a href="../view/Ticket_and_security.html">票务&安保</a></li>
+			<li><a href="../view/Interview.html">采访席</a></li>
+			<li><a href="../view/Infield.html">内场</a></li>
+		</ul>
+	</li>
+	</ul>
+	<header class="header">
+		<h1>2018年KPL春季赛常规赛 Checklist <span>公共信号赛前</span></h1>
+		<span id="cu_date">日期</span>
+	</header>
+	<div id="example-table-1" style="margin:auto;"></div>
+	<div style="text-align:right"><input type="button" value="提交" class="btn btn-primary" id="btnFormSave" style="width:200px; margin-right: 0px; margin-top: 10px;" /></div>
+
+	<header class="header">
+		<h2>上海直播开始前30分钟导播车再检查</h2>
+	</header>
+	<div id="example-table-2" style="margin:auto;"></div>
+	<div style="text-align:right"><input type="button" value="提交" class="btn btn-primary" id="btnFrm" style="width:200px; margin-right: 0px; margin-top: 10px" /></div>
+
+	<div id="rep_btn" style="text-align:right"><input type="button" value="添加负责人检查意见" class="btn btn-primary" id="btn_rep" style="width:200px; margin-right: 0px; margin-top:5px;"/></div>
+
+ 	<div class="rep_text">
+ 		<div><label class="rep" id="rep_name">负责人:null</label></div>
+ 		<div><label class="rep" id="rep_desc">检查意见及处理结果:null</label></div>
+ 	</div>
+
+	<script type="text/javascript">
+	//获取时间
+	function request_time(){
+ 		var date = new Date();
+		var Y = date.getFullYear();
+		var M = date.getMonth()+1 < 10 ? '0'+(date.getMonth()+1) : date.getMonth()+1;
+		var D = date.getDate() < 10 ? '0' + (date.getDate()) : date.getDate();
+		var day = Y + "年" + M + "月" + D + "日";
+
+		document.getElementById("cu_date").innerHTML = day;
+ 	};
+
+ 	//显示时间
+ 	request_time();
+
+
+	$(function() {
+		$('#btnFormSave').click(function(e){
+			var num = 0;
+			var id_arr = new Array();
+			var user_name = new String();
+			var desc = new String();
+			var code_arr = new Array();
+
+			for (var i = 0; i <tabledata.length; i++){
+				if (tabledata[i]["statue"] == 1) {
+					id_arr.push(tabledata[i]["inspect_id"]);
+					code_arr.push(tabledata[i]["id"]);
+					num ++;
+				};
+			}
+			if (num != 0) {
+				bDialog.open({
+				title : "选择了 " + num + " 项",
+				width : 500,
+				height : 310,
+				customClass : 'blue',
+				url : '../hello.html',
+				callback:function(data){
+					console.log("12");
+					console.log(data);
+					if(data && data.results && data.results.length > 0 ){
+						new NoticeJs({
+			    			text: '提交数据中……',
+			    			type: "success",
+			    			position: 'bottomRight',
+			    			timeout: 15,
+			    			animation: {
+			        			open: 'animated flipInX',
+			        			close: 'animated flipOutX'
+			    			}
+						}).show();
+						user_name = data.results[0].userName;
+						desc = data.results[0].userDesc;
+						send_confrim(user_name,desc,id_arr,code_arr);
+					}
+				}
+			});
+			}
+		});
+	});
+
+	$(function(){
+		$('#btnFrm').click(function(e){
+			var num = 0;
+			var id_arr = new Array();
+			var user_name = new String();
+			var desc = new String();
+			var code_arr = new Array();
+
+			for (var i = 0; i < tabledata2.length; i++) {
+				if (tabledata2[i].statue == 1) {
+					id_arr.push(tabledata2[i]["inspect_id"]);
+					code_arr.push(tabledata2[i]["id"]);
+					num ++;
+				};
+			};
+
+			if (num != 0) {
+				bDialog.open({
+				title : "选择了 " + num + " 项",
+				width : 500,
+				height : 310,
+				customClass : 'blue',
+				url : '../hello.html',
+				callback:function(data){
+					if(data && data.results && data.results.length > 0 ){
+						new NoticeJs({
+			    			text: '提交数据中……',
+			    			type: "success",
+			    			position: 'bottomRight',
+			    			timeout: 15,
+			    			animation: {
+			        			open: 'animated flipInX',
+			        			close: 'animated flipOutX'
+			    			}
+						}).show();
+						user_name = data.results[0].userName;
+						desc = data.results[0].userDesc;
+						send_confrim(user_name,desc,id_arr,code_arr);
+					}
+				}
+				});
+
+			}
+		});
+	});
+
+	//查询负责人提交信息
+	function send_rep_info(){
+		var date = new Date();
+		var Y = date.getFullYear();
+		var M = date.getMonth()+1 < 10 ? '0'+(date.getMonth()+1) : date.getMonth()+1;
+		var D = date.getDate() < 10 ? '0' + (date.getDate()) : date.getDate();
+		var day = Y+M+D;
+		var url = http + "index/request_rep_info";
+		var dic = {"project_id":"5","confirm_day":day};
+		$.post(url,dic,request_rep_info);
+
+	}
+
+	//获得负责人返回信息
+	function request_rep_info(data,status){
+		if (data["code"] == 200) {
+			$("#rep_btn").remove();
+
+			var name = "负责人:" + data["data"][0]["user_name"];
+			var desc = "检查意见及处理结果:" +data["data"][0]["confirm_desc"];
+
+			console.log(data);
+			document.getElementById("rep_name").innerHTML = name;
+			document.getElementById("rep_desc").innerHTML = desc;
+
+		};
+	}
+
+	send_rep_info();
+
+	//负责人确认
+	$(function(){
+		$('#btn_rep').click(function(e){
+			bDialog.open({
+				title : "负责人确认/意见/处理结果",
+				width : 500,
+				height : 310,
+				customClass : 'blue',
+				url : '../responsibility_confirm.html',
+				callback:function(data){
+						if(data && data.results && data.results.length > 0 ){
+							new NoticeJs({
+			    				text: '提交数据中……',
+			    				type: "success",
+			    				position: 'bottomRight',
+			    				timeout: 15,
+			    				animation: {
+			        				open: 'animated flipInX',
+			        				close: 'animated flipOutX'
+			    				}
+							}).show();
+							user_name = data.results[0].userName;
+							desc = data.results[0].userDesc;
+							console.log(data.results);
+							send_rep_confirm(user_name,desc);
+						}
+				}
+			});
+		});
+	});
+
+	//提交负责人确认信息接口
+	function send_rep_confirm(name,desc){
+		var dic = {"user":name,"desc":desc,"project_id":"5"};
+		var url = http + "index/rep_submit_confirm";
+		$.post(url,dic,rep_requestinfo);
+	}
+
+	//收到负责人确认信息接口返回
+	function rep_requestinfo(data,status){
+		if (data["code"] == 200) {
+			$("#rep_btn").remove();
+			send_rep_info();
+		};
+	}
+
+	//加载数据
+	function relaodinfo(type){
+		var date = new Date();
+		var Y = date.getFullYear();
+		var M = date.getMonth()+1 < 10 ? '0'+(date.getMonth()+1) : date.getMonth()+1;
+		var D = date.getDate() < 10 ? '0' + (date.getDate()) : date.getDate();
+		var day = Y+M+D;
+		var url = http + "index/request_info";
+		if (type == 1) {
+			var dic = {"day":day,"project":"5","code_s":"1","code_e":"30"};
+			$.post(url,dic,requestinfo);
+		}
+		else{
+			var dic = {"day":day,"project":"5","code_s":"31","code_e":"38"};
+			$.post(url,dic,requestinfo2);
+		}
+		
+	}
+
+	//获取数据后的操作
+	function requestinfo(data,status){
+		var data_json = data["data"];
+		console.log(data);
+		for(var i = 0; i < data_json.length; i ++){
+			for (var j = 0; j < tabledata.length; j ++){
+				var a = data_json[i]["code"];
+				var b = tabledata[j]["id"];
+
+				if (a == b) {
+					var time = data_json[i]["inspect_time"];
+					time = timetrans(time);
+
+					tabledata[j]["confirm"] = 1;
+					tabledata[j]["time"] = time;
+					tabledata[j]["person"] = data_json[i]["user_name"];
+					tabledata[j]["desc"] = data_json[i]["user_desc"];
+					tabledata[j]["statue"] = -1;
+					tabledata[j]["inspect_id"] = data_json[i]["inspect_id"];
+				};
+			};
+		};
+		$("#example-table-1").tabulator("setData",tabledata);
+	}
+
+	function requestinfo2(data,status){
+		var data_json = data["data"];
+		
+		for(var i = 0; i < data_json.length; i ++){
+			for (var j = 0; j < tabledata2.length; j ++){
+				var a = data_json[i]["code"];
+				var b = tabledata2[j]["id"];
+
+				if (a == b) {
+					var time = data_json[i]["inspect_time"];
+					time = timetrans(time);
+
+					tabledata2[j]["confirm"] = 1;
+					tabledata2[j]["time"] = time;
+					tabledata2[j]["person"] = data_json[i]["user_name"];
+					tabledata2[j]["desc"] = data_json[i]["user_desc"];
+					tabledata2[j]["statue"] = -1;
+					tabledata2[j]["inspect_id"] = data_json[i]["inspect_id"];
+				};
+			};
+		};
+		$("#example-table-2").tabulator("setData",tabledata2);
+	}
+
+	//发送确认信息
+	function send_confrim(name,desc,id_arr,code){
+		console.log(code);
+		var dic = {"user":name,"desc":desc,"id_arr":id_arr,"project_id":"5","code_arr":code};
+		var url = http + "index/submit_confirm";
+		$.post(url,dic,send_requstinfo);
+	}
+
+	//确认信息返回
+	function send_requstinfo(data,status){
+		console.log(data);
+		if (data["code"] == 200) {
+			relaodinfo(1);
+			relaodinfo(2);
+		};
+	}
+
+	//加载表格1
+	$("#example-table-1").tabulator({
+		headerBackgroundColor: "#FFE4C4",
+		rowBackgroundColor:"#FFFFF0",
+		rowHoverBackground:"#D8BFD8",
+		fitColumns:true,
+		columns:[ 
+			{title:"选择", field:"statue", formatter:
+				function(value, data, cell, row, options){
+					var select_no = "<img src='../image/icon_register_radio@2x.png' alt='未选择' width=50% heigth=50%/>";
+					var select_on = "<img src='../image/icon_register_radio_on@2x.png' alt='已选择' width=50% heigth=50%/>";
+					if(value == 1){
+						return select_on;
+					}
+					else if(value == -1){
+						return null;
+					}
+					else{
+						return select_no;
+					}
+				}
+				,align:"center",width:40,sortable:false,
+				onClick:function(e, cell, val, row){
+					var select_stu = tabledata[row.id - 1].statue;
+					if (select_stu == 1) {
+						tabledata[row.id - 1].statue = 0;
+						select_stu = 0;
+					}
+					else if (select_stu == -1) {
+
+					}
+					else {
+						tabledata[row.id - 1].statue = 1;
+						select_stu = 1;
+					};
+					$("#example-table-1").tabulator("setData",tabledata); 
+			 	}
+			 },
+			{title:"负责人",field:"resp_per",sorter:"string",align:"center",width:80,sortable:false},
+			{title:"区域", field:"region", sorter:"string", width:130,sortable:false},
+			{title:"检查项", field:"inspect", sorter:"string",width:500,sortable:false},
+			{title:"确认", field:"confirm", sorter:"string", formatter:"tickCross", align:"center", width:100,sortable:false},
+			{title:"检查时间", field:"time", sorter:"string", align:"center", width:100,sortable:false},
+			{title:"检查人", field:"person", sorter:"string", width:100,sortable:false},
+			{title:"备注", field:"desc", sorter:"string", align:"center",sortable:false}
+		],
+
+	});
+
+	//加载数据1
+	relaodinfo(1);
+
+	//绘制表格
+	$(window).resize(function(){
+		$("#example-table-1").tabulator("redraw");
+	});
+
+	//加载表格2
+	$("#example-table-2").tabulator({
+		headerBackgroundColor: "#FFE4C4",
+		rowBackgroundColor:"#FFFFF0",
+		rowHoverBackground:"#D8BFD8",
+		fitColumns:true,
+		columns:[
+			{title:"选择", field:"statue", formatter:
+				function(value, data, cell, row, options){
+					var select_no = "<img src='../image/icon_register_radio@2x.png' alt='未选择' width=50% heigth=50%/>";
+					var select_on = "<img src='../image/icon_register_radio_on@2x.png' alt='已选择' width=50% heigth=50%/>";
+					if(value == 1){
+						return select_on;
+					}
+					else if (value == -1) {
+
+					}
+					else{
+						return select_no;
+					}
+				}
+				,align:"center",width:40,sortable:false,
+				onClick:function(e, cell, val, row){
+					//alert("12");
+					var select_stu = tabledata2[row.id - 31].statue;
+					if (select_stu == 1) {
+						tabledata2[row.id - 31].statue = 0;
+						select_stu = 0;
+					}
+					else if (select_stu == -1) {
+
+					}
+					else {
+						tabledata2[row.id - 31].statue = 1;
+						select_stu = 1;
+					};
+					$("#example-table-2").tabulator("setData",tabledata2); 
+			 	}
+			 }, 
+			{title:"负责人",field:"resp_per",sorter:"string",align:"center",width:80,sortable:false},
+			{title:"区域", field:"region", sorter:"string", width:130,sortable:false},
+			{title:"检查项", field:"inspect", sorter:"string",width:600,sortable:false},
+			{title:"确认", field:"confirm", sorter:"string",formatter:"tickCross",align:"center", width:50,sortable:false},
+			{title:"检查时间", field:"time", sorter:"string", align:"center", width:70,sortable:false},
+			{title:"检查人", field:"person", sorter:"string", align:"center",width:70,sortable:false},
+			{title:"备注", field:"desc", sorter:"string", align:"center",sortable:false}
+		],
+	});
+
+	//加载数据2
+	relaodinfo(2);
+
+	//绘制表格2
+	$(window).resize(function(){
+		$("#example-table-2").tabulator("redraw");
+	});
+	</script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+[ 2015-09-23T09:55:00+08:00 ] ::1 /CookingGod/index.php/home/cookbook/hotcook
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000767s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001042s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001132s ]
+ERR: 无法加载数据库驱动: Think\Db\Driver\
+
+[ 2015-09-23T09:56:43+08:00 ] ::1 /CookingGod/index.php/home/cookbook/hotcook
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000743s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001493s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001564s ]
+ERR: SQLSTATE[HY000] [1049] Unknown database 'cookinggoddb'
+
+[ 2015-09-23T09:57:28+08:00 ] ::1 /CookingGod/index.php/home/cookbook/hotcook
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000431s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000594s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000680s ]
+SQL: SHOW COLUMNS FROM `t_cookbook` [ RunTime:0.0036s ]
+SQL: SELECT `cookbook_id` FROM `t_cookbook`  [ RunTime:0.0004s ]
+
+[ 2015-09-23T09:59:23+08:00 ] ::1 /CookingGod/index.php/home/cookbook/hotcook
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000409s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000517s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000585s ]
+SQL: SHOW COLUMNS FROM `t_cookbook` [ RunTime:0.0022s ]
+SQL: SELECT `cookbook_id` FROM `t_cookbook`  [ RunTime:0.0003s ]
+
+[ 2015-09-23T10:01:06+08:00 ] ::1 /CookingGod/index.php/home/cookbook/hotcook
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000428s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000536s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000605s ]
+SQL: SHOW COLUMNS FROM `t_cookbook` [ RunTime:0.0023s ]
+SQL: SELECT `cookbook_id` FROM `t_cookbook`  [ RunTime:0.0003s ]
+
+[ 2015-09-23T10:01:40+08:00 ] ::1 /CookingGod/index.php/home/cookbook/hotcook
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000677s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000785s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000902s ]
+SQL: SHOW COLUMNS FROM `t_cookbook` [ RunTime:0.1333s ]
+SQL: SELECT `cookbook_id`,`cookbook_name` FROM `t_cookbook`  [ RunTime:0.0004s ]
+
+[ 2015-09-23T10:01:53+08:00 ] ::1 /CookingGod/index.php/home/cookbook/hotcook
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000404s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000602s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000671s ]
+SQL: SHOW COLUMNS FROM `t_cookbook` [ RunTime:0.0021s ]
+SQL: SELECT `cookbook_id` FROM `t_cookbook`  [ RunTime:0.0003s ]
+
