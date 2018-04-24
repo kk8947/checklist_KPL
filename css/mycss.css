@@ -8,12 +8,20 @@
 	padding-right: 1px;*/
 }
 
+/*.Screening_conditions{
+	width: 100px;
+	display:inline;
+	float: left;
+}*/
 
 .htmleaf-header1{
 padding: 1em 190px 1em;
 letter-spacing: -1px;
 text-align: center;
 }
+/*select{
+	width: 100px;
+}*/
 body{
 	padding:20px 40px;
 	font-family: 'Montserrat', sans-serif !important;
@@ -39,6 +47,7 @@ input{
 	font-family: 'Montserrat', sans-serif !important;
 
 }
+
 
 .header{
 	padding: 1em 190px 1em; /*内边距，上右下左*/
@@ -72,6 +81,12 @@ input{
 }
 
 .export_bg{
+	margin-top: 20px;
 	margin-left: 20px;
 	margin-right: 20px;
 }
+
+/*.form-control{
+	width: 100px;
+}
+*/

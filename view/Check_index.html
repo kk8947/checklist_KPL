@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>游击Check</title>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+
+	<script src="../js/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="../js/jquery-ui-11.4/jquery-ui.min.js"></script>
+	<link rel="stylesheet" href="../js/jquery-ui-11.4/jquery-ui.theme.min.css">
+	<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" type="text/css">
+	<link rel="stylesheet" href="../css/b.dialog.bootstrap3.css" type="text/css">
+	<script type="text/javascript" src="../bootstrap/js/bootstrap.js"></script>
+
+	<!-- mycss -->
+	<link rel="stylesheet" type="text/css" href="../css/mycss.css">
+	<script type="text/javascript" src="../js/Utility.js"></script>
+
+	<!-- 引入bootstrap-table样式 -->
+	<link href="../dist/bootstrap-table/bootstrap-table.min.css" rel="stylesheet">
+	<link href="../dist/bootstrap-table/bootstrap-table.min.js">
+	<link href="../dist/bootstrap-table/locale/bootstrap-table-zh-CN.min.js">
+	<script src="../js/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="../js/jquery-ui-11.4/jquery-ui.min.js"></script>
+	<script src="../dist/bootstrap-table/bootstrap-table.js"></script>
+</head>
+<body>
+	<header class="header">
+		<h1>2018年KPL春季赛常规赛 Checklist <span>AV控台区 大屏</span></h1>
+		<span id="cu_date">日期</span>
+	</header>
+
+	<div class="export_bg" style="margin-top:20px;">
+		<table id="table"></table>
+	</div>
+	<div style="text-align:right"><input type="button" value="提交" class="btn btn-primary" id="btnFormSave" style="width:200px; margin-right: 0px; margin-top: 10px; margin-top: 10px" /></div>
+
+
+	<script type="text/javascript">
+	//获取时间
+	function request_time(){
+ 		var date = new Date();
+		var Y = date.getFullYear();
+		var M = date.getMonth()+1 < 10 ? '0'+(date.getMonth()+1) : date.getMonth()+1;
+		var D = date.getDate() < 10 ? '0' + (date.getDate()) : date.getDate();
+		var day = Y + "年" + M + "月" + D + "日";
+
+		document.getElementById("cu_date").innerHTML = day;
+ 	};
+
+ 	//显示时间
+ 	request_time();
+
+ 	//解析url
+ 	function Request(strName){
+ 		var strHref = location.search;
+ 		var intPos = strHref.indexOf("?");
+ 		var strRight = strHref.substr(intPos + 1);
+ 		var arrTmp = strRight.split("&");
+ 		for(var i = 0; i < arrTmp.length; i++){
+ 			var arrTemp = arrTmp[i ].split("=");
+ 			if(arrTemp[0].toUpperCase() == strName.toUpperCase()) return arrTemp[1];
+ 		}
+ 		return "";
+ 	}
+
+ 	function operateFormatter(value, row, index) {
+ 		alert(row);
+ 	}
+ 	$(function() {
+ 		$("#table").bootstrapTable({
+			cache: false, // 设置为 false 禁用 AJAX 数据缓存， 默认为true
+			striped: true,  //表格显示条纹，默认为false
+
+			columns: [
+				{field:"checkbox",title:"选择",align:'center',valign:'middle',formatter:
+					function(value, data, cell, row, options){
+						var select_no = "<img src='../image/icon_register_radio@2x.png' alt='未选择' width=80% heigth=80%/>";
+						var select_on = "<img src='../image/icon_register_radio_on@2x.png' alt='已选择' width=50% heigth=50%/>";
+						if(value == 1){
+							return select_on;
+						}
+						else if(value == -1){
+							return null;
+						}
+						else{
+							return select_no;
+						}
+					},
+					events:operateFormatter
+				},
+				{field:"code",title:"编号",align:'center',valign: 'middle'},
+				{field:"region",title:"区域",align:'center',valign: 'middle'},
+				{field:"inspect",title:"检查项",align:'center',valign: 'middle'},
+				{field:"inspect_time",title:"检查时间",align:'center',valign: 'middle'},
+				{field:"edit_man",title:"编辑人员",align:'center',valign: 'middle'},
+				{field:"user_name",title:"检查人",align:'center',valign: 'middle'},
+				{field:"user_desc",title:"备注",align:'center',valign: 'middle'},
+
+			]
+		});
+		$('#btnFormSave').click(function(e){
+			alert(Request("project_id"));
+			var url = location.search.substr(1)　//去掉?号;
+			var strRight = url.substr(url + 1);
+			//alert(strRight);
+
+		});
+	});
+
+	//加载数据
+	function relaodinfo(type){
+		var date = new Date();
+		var Y = date.getFullYear();
+		var M = date.getMonth()+1 < 10 ? '0'+(date.getMonth()+1) : date.getMonth()+1;
+		var D = date.getDate() < 10 ? '0' + (date.getDate()) : date.getDate();
+		var day = Y+M+D;
+		var url = http + "index/zheng_info";
+		if (type == 1) {
+			var dic = {"day":day,"project_id":Request("project_id"),"code_s":"1","code_e":"11"};
+			$.post(url,dic,requestinfo);
+		}
+		else{
+			var dic = {"day":day,"project_id":Request("project_id"),"code_s":"12","code_e":"19"};
+			$.post(url,dic,requestinfo2);
+		}
+	}
+
+	//获取数据后的操作
+	function requestinfo(data,status){
+		var project_id = Request("project_id");
+		if (project_id != 4) {
+			$('#table').bootstrapTable('hideColumn', "edit_man");
+		}
+		else{
+			$('#table').bootstrapTable('showColumn', "edit_man");
+		}
+		var data_json = data["data"];
+		console.log(data_json);
+		$('#table').bootstrapTable('load', data_json);
+	}
+
+	relaodinfo(1);
+
+	</script>
+</body>
+</html>

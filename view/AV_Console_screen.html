@@ -54,6 +54,7 @@
 
 </head>
 <body>
+
 	<ul class="nav nav-pills">
 	<li class="dropdown all-camera-dropdown">
 		<a class="dropdown-toggle" data-toggle="dropdown" href="#">
@@ -78,6 +79,7 @@
 			<li><a href="../view/Ticket_and_security.html">票务&安保</a></li>
 			<li><a href="../view/Interview.html">采访席</a></li>
 			<li><a href="../view/Infield.html">内场</a></li>
+			<li><a href="../view/Export.html">导出页</a></li>
 		</ul>
 	</li>
 	</ul>
@@ -115,6 +117,8 @@
 
  	//显示时间
  	request_time();
+
+
 
 	$(function() {
 		$('#btnFormSave').click(function(e){
@@ -445,7 +449,7 @@
 						return select_no;
 					}
 				}
-				,align:"center",width:40,sortable:false,
+				,align:"center",width:10,sortable:false,
 				onClick:function(e, cell, val, row){
 					//alert("12");
 					var select_stu = tabledata2[row.id - 13].statue;

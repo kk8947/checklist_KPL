@@ -5,10 +5,16 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
 
-	<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" href="../css/b.dialog.bootstrap3.css" type="text/css">
+	<script src="../js/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="../js/jquery-ui-11.4/jquery-ui.min.js"></script>
 	<link rel="stylesheet" href="../js/jquery-ui-11.4/jquery-ui.theme.min.css">
+	<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" type="text/css">
+	<link rel="stylesheet" href="../css/b.dialog.bootstrap3.css" type="text/css">
+	<script type="text/javascript" src="../bootstrap/js/bootstrap.js"></script>
+
+	<!-- mycss -->
 	<link rel="stylesheet" type="text/css" href="../css/mycss.css">
+	<script type="text/javascript" src="../js/Utility.js"></script>
 
 	<!-- 引入bootstrap-table样式 -->
 	<link href="../dist/bootstrap-table/bootstrap-table.min.css" rel="stylesheet">
@@ -16,7 +22,16 @@
 	<link href="../dist/bootstrap-table/locale/bootstrap-table-zh-CN.min.js">
 	<script src="../js/jquery-2.1.1.min.js"></script>
 	<script type="text/javascript" src="../js/jquery-ui-11.4/jquery-ui.min.js"></script>
-	<script src="../src/bootstrap-table.js"></script>
+	<script src="../dist/bootstrap-table/bootstrap-table.js"></script>
+
+	<!-- bootstrap-datepicker -->
+	<link rel="stylesheet" type="text/css" href="../dist/bootstrap-datepicker/css/bootstrap-datepicker3.css">
+	<script type="text/javascript" src="../dist/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+	<script type="text/javascript" src="../dist/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min.js" charset="UTF-8"></script>
+
+	<!-- bootstrap-select -->
+	<link rel="stylesheet" href="../dist/bootstrap-select/css/bootstrap-select.css">
+	<script src="../dist/bootstrap-select/js/bootstrap-select.js" defer></script>
 
 	<!-- export引用 -->
 	<link href="../dist/export/css/tableexport.min.css" rel="stylesheet">
@@ -25,6 +40,11 @@
 	<script src="../js/export/FileSaver.min.js"></script>
 	<script src="../dist/export/js/tableexport.js"></script>
 
+	
+
+	<style type="text/css">
+
+	</style>
 <!-- Latest compiled and minified JavaScript -->
 <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.12.1/bootstrap-table.min.js"></script> -->
 
@@ -36,56 +56,188 @@
 	
 </head>
 <body>
-	<div class="export_bg">
+	<header class="header">
+		<h2>导出页</h2>
+	</header>
+
+	<!-- 筛选条件 -->
+	<div class="Screening_conditions" align="center">
+		<form class="form-inline">
+		<span>选择表</span>
+		<div class="form-group" style="margin-right:30px;">
+    		<select id="lunch" class="selectpicker" data-live-search="true" title="选择表" style="width:50px;">
+        		<option>游击CHECK</option>
+        		<option>AV控台区_大屏</option>
+        		<option>AV控台区_灯光</option>
+        		<option>公共信号字幕</option>
+        		<option>公共信号赛前</option>
+        		<option>公共信号赛后</option>
+        		<option>公共信号音频</option>
+        		<option>推流</option>
+        		<option>推流周期1</option>
+        		<option>推流周期2</option>
+        		<option>推流周期3</option>
+        		<option>推流周期4</option>
+        		<option>赛事赛前</option>
+        		<option>赛事进行</option>
+        		<option>赛事赛后</option>
+        		<option>票务&安保</option>
+        		<option>采访席</option>
+        		<option>内场</option>
+      		</select>
+    	</div>
+
+		<span>选择日期</span>
+		<div class="input-group date datepicker"  style="width:200px;">
+			<input id="day" type="text" class="form-control">
+			<div class="input-group-addon ">
+				<span class="glyphicon glyphicon-th "></span>
+			</div>
+		</div>
+		<button type="button" class="btn btn-success" id="btnFormSave" style="width:100px;margin-left:30px;">查询</button>
+		</form>
+
+	</div>
+
+	<div class="export_bg" style="margin-top:20px;">
 		<table id="table"></table>
 	</div>
 	
 
 	<script type="text/javascript">
-	var tabledata = [
-	{id:1,region:"票务人员&设备",inspect:"票务人员按时到岗",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:245},
-	{id:2,region:"票务人员&设备",inspect:"查询当日票数",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:246,checktime:"16:00"},
-	{id:3,region:"票务人员&设备",inspect:"查询观众进场数量",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:247,checktime:"17:00"},
-	{id:4,region:"票务人员&设备",inspect:"查询观众进场数量",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:248,checktime:"18:00"},
-	{id:5,region:"票务人员&设备",inspect:"查询观众进场数量",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:249,checktime:"19:00"},
-	{id:6,region:"票务人员&设备",inspect:"查询观众进场数量",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:250,checktime:"20:00"},
-	{id:7,region:"票务人员&设备",inspect:"票务人员统一着装",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:251},
-	{id:8,region:"票务人员&设备",inspect:"检票和检证PDA设备可以正常使用",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:252},
-	{id:9,region:"票务人员&设备",inspect:"检票区wifi网络正常提供",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:253},
-	{id:10,region:"票务人员&设备",inspect:"检查所有观众座椅编号是否完整正确、扎带是否完好",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:254},
-	{id:11,region:"主管",inspect:"票务主管在现场指挥负责",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:255},
-	{id:12,region:"全体安保",inspect:"所有安保人员按时集合",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:256},
-	{id:13,region:"全体安保",inspect:"按时完成清场",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:257},
-	{id:14,region:"全体安保",inspect:"铁马、安检设备布置完毕",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:258},
-	{id:15,region:"全体安保",inspect:"安保人员无点位缺岗",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:259},
-	{id:16,region:"全体安保",inspect:"安保人员配备对讲机可以及时沟通",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:260},
-	{id:17,region:"安保主管",inspect:"主管在现场指挥负责",confirm:"",time:"",person:"",desc:"",statue:0,inspect_id:261},
-	];
 		$("#table").bootstrapTable({
-
-			data: tabledata,
 			cache: false, // 设置为 false 禁用 AJAX 数据缓存， 默认为true
 			striped: true,  //表格显示条纹，默认为false
+
 			columns: [
-				{field:"id",title:"编号",align:'center',valign: 'middle'},
+				{field:"code",title:"编号",align:'center',valign: 'middle'},
 				{field:"region",title:"区域",align:'center',valign: 'middle'},
 				{field:"inspect",title:"检查项",align:'center',valign: 'middle'},
-				{field:"confirm",title:"确认",align:'center',valign: 'middle'},
-				{field:"time",title:"检查时间",align:'center',valign: 'middle'},
-				{field:"person",title:"检查人",align:'center',valign: 'middle'},
-				{field:"desc",title:"备注",align:'center',valign: 'middle'},
+				{field:"inspect_time",title:"检查时间",align:'center',valign: 'middle'},
+				{field:"edit_man",title:"编辑人员",align:'center',valign: 'middle'},
+				{field:"user_name",title:"检查人",align:'center',valign: 'middle'},
+				{field:"user_desc",title:"备注",align:'center',valign: 'middle'},
 
 			]
 
 		});
 
 		$(function(){
+			
+			$('.datepicker').datepicker({
+				format: 'yyyymmdd',
+				language: 'zh-CN'
+			});
 			$("table").tableExport({
 				formats:["xlsx","xls","csv","txt"],
 				fileName: "table11",//导出文件名称
 				bootstrap:true
 			});
+			$('#btnFormSave').click(function(e){
+				var project_id = exchange_project_id($('#lunch').val());
+				var day = $('#day').val()
+				if (project_id == 0 || day.length == 0) {
+					alert("筛选条件没有选择！")
+				}
+				else{
+					var url = http + "index/export_info";
+					var dic = {"project_id":project_id,"day":day};
+					$.post(url,dic,requestinfo);
+				}
+				
+			});
 		})
+
+		//获取数据后的操作
+		function requestinfo(data,status){
+			var project_id = exchange_project_id($('#lunch').val());
+			if (project_id != 4) {
+				$('#table').bootstrapTable('hideColumn', "edit_man");
+			}
+			else{
+				$('#table').bootstrapTable('showColumn', "edit_man");
+			}
+			var data_json = data["data"];
+			$('#table').bootstrapTable('load', data_json);
+		}
+
+		function exchange_project_id(name){
+			var id = 0;
+			switch(name){
+				case "游击CHECK" :
+					id = 1;
+					break;
+
+				case "AV控台区_大屏" :
+					id = 2;
+					break;
+
+				case "AV控台区_灯光" :
+					id = 3;
+					break;
+
+				case "公共信号字幕" :
+					id = 4;
+					break;
+
+				case "公共信号赛前" :
+					id = 5;
+					break;
+
+				case "公共信号赛后" :
+					id = 6;
+					break;
+
+				case "公共信号音频" :
+					id = 7;
+					break;
+
+				case "推流" :
+					id = 8;
+					break;
+
+				case "推流周期1" :
+					id = 9;
+					break;
+
+				case "推流周期2" :
+					id = 10;
+					break;
+
+				case "推流周期3" :
+					id = 11;
+					break;
+
+				case "推流周期4" :
+					id = 12;
+					break;
+
+				case "赛事赛前" :
+					id = 13;
+					break;
+
+				case "赛事进行" :
+					id = 14;
+					break;
+
+				case "赛事赛后" :
+					id = 15;
+					break;
+
+				case "票务&安保" :
+					id = 16;
+					break;
+
+				case "采访席" :
+					id = 17;
+					break;
+
+				case "内场" :
+					id = 18;
+					break;
+			}
+			return id;
+		}
 
 		//重写导出按钮
 		$.fn.tableExport.xlsx = {
