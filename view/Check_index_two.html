@@ -77,7 +77,15 @@
 	<div class="export_bg" style="margin-top:20px;">
 		<table id="table"></table>
 	</div>
-	<div style="text-align:right"><input type="button" value="提交" class="btn btn-success" id="btnFormSave" style="width:170px; margin-right: 20px; margin-top: 15px;" /></div>
+	<div style="text-align:right"><input type="button" value="提交" class="btn btn-success" id="btnFormSave" style="width:170px; margin-right: 20px; margin-top: 10px; " /></div>
+
+	<header class="header">
+		<h2 id="second_titel">上海直播开始前30分钟导播车再检查</h2>
+	</header>
+	<div class="export_bg" style="margin-top:20px;">
+		<table id="table2"></table>
+	</div>
+	<div style="text-align:right"><input type="button" value="提交" class="btn btn-success" id="btnFrm" style="width:170px; margin-right: 20px; margin-top: 15px;" /></div>
 
 	<div id="rep_btn" style="text-align:right"><input type="button" value="添加负责人检查意见" class="btn btn-success" id="btn_rep" style="width:170px; margin-right: 20px; margin-top:10px;"/></div>
 
@@ -89,6 +97,7 @@
 	<script type="text/javascript">
 	//初始化全局变量
 	var tabledata = new Array();
+	var tabledata2 = new Array();
 
 	//获取时间/标题
 	function request_time(){
@@ -100,6 +109,7 @@
 
 		document.getElementById("cu_date").innerHTML = day;
 		document.getElementById("project_name").innerHTML = exchange_project_name(Request("project_id"));
+		document.getElementById("second_titel").innerHTML = exchange_second_titel(Request("project_id"));
 		
  	};
 
@@ -143,7 +153,6 @@
 				{field:"code",title:"编号",align:'center',valign: 'middle'},
 				{field:"region",title:"区域",align:'center',valign: 'middle'},
 				{field:"inspect",title:"检查项",align:'center',valign: 'middle'},
-				{field:"should_time",title:"应该检查时间",align:'center',valign: 'middle'},
 				{field:"inspect_time",title:"检查时间",align:'center',valign: 'middle'},
 				{field:"edit_man",title:"编辑人员",align:'center',valign: 'middle'},
 				{field:"user_name",title:"检查人",align:'center',valign: 'middle'},
@@ -153,6 +162,41 @@
 			onClickRow:function(row, field){
 				//alert(row.code);
 				click_row(row.code - 1);
+			}
+		});
+		//表二构造
+		$("#table2").bootstrapTable({
+			cache: false, // 设置为 false 禁用 AJAX 数据缓存， 默认为true
+			striped: true,  //表格显示条纹，默认为false
+
+			columns: [
+				{field:"checkbox",title:"选择",align:'center',valign:'middle',width:'50px',formatter:
+					function(value, data, cell, row, options){
+						var select_no = "<img src='../image/icon_register_radio@2x.png' alt='未选择' width=80% heigth=80%/>";
+						var select_on = "<img src='../image/icon_register_radio_on@2x.png' alt='已选择' width=80% heigth=80%/>";
+						if(value == 1){
+							return select_on;
+						}
+						else if(value == -1){
+							return null;
+						}
+						else{
+							return select_no;
+						}
+					},
+				},
+				{field:"code",title:"编号",align:'center',valign: 'middle'},
+				{field:"region",title:"区域",align:'center',valign: 'middle'},
+				{field:"inspect",title:"检查项",align:'center',valign: 'middle'},
+				{field:"inspect_time",title:"检查时间",align:'center',valign: 'middle'},
+				{field:"edit_man",title:"编辑人员",align:'center',valign: 'middle'},
+				{field:"user_name",title:"检查人",align:'center',valign: 'middle'},
+				{field:"user_desc",title:"备注",align:'center',valign: 'middle'},
+
+			],
+			onClickRow:function(row, field){
+				//alert(row.code);
+				click_row2(row.code - exchange_code_s_two(Request("project_id")));
 			}
 		});
 		//第一个表的提交按钮
@@ -193,14 +237,52 @@
 					if(data && data.results && data.results.length > 0 ){
 						user_name = data.results[0].userName;
 						desc = data.results[0].userDesc;
-						edit = data.results[0].edit;
-						send_confrim(user_name,desc,id_arr,code_arr,edit);
+						send_confrim(user_name,desc,id_arr,code_arr);
 						//alert(user_name);
 					}
 				}
 			});
 			}
 
+		});
+
+		//第二个表的提交按钮
+		$('#btnFrm').click(function(e){
+			var num = 0;
+			var id_arr = new Array();
+			var user_name = new String();
+			var desc = new String();
+			var code_arr = new Array();
+
+			//循环有多少被选中的行
+			for (var i = 0; i <tabledata2.length; i++){
+				if (tabledata2[i]["checkbox"] == 1) {
+					id_arr.push(tabledata2[i]["Inspection_item_id"]);
+					code_arr.push(tabledata2[i]["code"]);
+					num ++;
+				};
+			}
+
+			var url = new String();
+			var heigh = 310;
+
+			if (num != 0) {
+				bDialog.open({
+				title : "选择了 " + num + " 项",
+				width : 500,
+				height : 310,
+				customClass : 'blue',
+				url : "../hello.html",
+				callback:function(data){
+					if(data && data.results && data.results.length > 0 ){
+						user_name = data.results[0].userName;
+						desc = data.results[0].userDesc;
+						send_confrim(user_name,desc,id_arr,code_arr);
+						//alert(user_name);
+					}
+				}
+			});
+			}
 		});
 	});
 
@@ -213,17 +295,21 @@
 		var day = Y+M+D;
 		var url = http + "index/zheng_info";
 		var code_e = exchange_code_e_one(Request("project_id"));
+		var code_s_two = exchange_code_s_two(Request("project_id"));
+		var code_e_two = exchange_code_e_two(Request("project_id"));
 		if (type == 1) {
 			var dic = {"day":day,"project_id":Request("project_id"),"code_s":"1","code_e":code_e};
 			$.post(url,dic,requestinfo);
+		}
+		else{
+			var dic = {"day":day,"project_id":Request("project_id"),"code_s":code_s_two,"code_e":code_e_two};
+			$.post(url,dic,requestinfo2);
 		}
 	}
 
 	//获取数据后的操作
 	function requestinfo(data,status){
 		var project_id = Request("project_id");
-		tabledata = new Array();
-		tabledata = data["data"];
 		//av控台区字幕需要添加编辑人员
 		if (project_id != 4) {
 			$('#table').bootstrapTable('hideColumn', "edit_man");
@@ -238,98 +324,34 @@
 		else{
 			$('#table').bootstrapTable('hideColumn', "region");
 		}
-		//推流周期显示应该检查时间
-		if (project_id == 9 || project_id == 10 || project_id == 11 || project_id == 12 || project_id == 16) {
-			$('#table').bootstrapTable('showColumn', "should_time");
-		}
-		else{
-			$('#table').bootstrapTable('hideColumn', "should_time");
-		}
-		//修改推流周期1数据
-		if (project_id == 9) {
-			for (var i = 0; i < tabledata.length; i++) {
-				if (i <= 4) {
-					tabledata[i]["should_time"] = "16:00";
-				}
-				else if (i >= 5 && i <= 9) {
-					tabledata[i]["should_time"] = "16:30";
-				}
-				else if (i >= 10 && i <= 14) {
-					tabledata[i]["should_time"] = "17:00";
-				}
-				else if (i >= 15 && i <= 19) {
-					tabledata[i]["should_time"] = "17:30";
-				}
-
-			};
-		};
-		//修改推流周期2数据
-		if (project_id == 10) {
-			for (var i = 0; i < tabledata.length; i++) {
-				if (i <= 4) {
-					tabledata[i]["should_time"] = "18:00";
-				}
-				else if (i >= 5 && i <= 9) {
-					tabledata[i]["should_time"] = "18:30";
-				}
-				else if (i >= 10 && i <= 14) {
-					tabledata[i]["should_time"] = "19:00";
-				}
-				else if (i >= 15 && i <= 19) {
-					tabledata[i]["should_time"] = "19:30";
-				}
-
-			};
-		};
-		//修改推流周期3数据
-		if (project_id == 11) {
-			for (var i = 0; i < tabledata.length; i++) {
-				if (i <= 4) {
-					tabledata[i]["should_time"] = "20:00";
-				}
-				else if (i >= 5 && i <= 9) {
-					tabledata[i]["should_time"] = "20:30";
-				}
-				else if (i >= 10 && i <= 14) {
-					tabledata[i]["should_time"] = "21:00";
-				}
-				else if (i >= 15 && i <= 19) {
-					tabledata[i]["should_time"] = "21:30";
-				}
-
-			};
-		};
-		//修改推流周期4数据
-		if (project_id == 12) {
-			for (var i = 0; i < tabledata.length; i++) {
-				if (i <= 4) {
-					tabledata[i]["should_time"] = "22:00";
-				}
-				else if (i >= 5 && i <= 9) {
-					tabledata[i]["should_time"] = "22:30";
-				}
-				else if (i >= 10 && i <= 14) {
-					tabledata[i]["should_time"] = "23:00";
-				}
-				else if (i >= 15 && i <= 19) {
-					tabledata[i]["should_time"] = "23:30";
-				}
-
-			};
-		};
-		//修改票务&安保数据
-		if (project_id == 16) {
-			tabledata[1]["should_time"] = "16:00";
-			tabledata[2]["should_time"] = "17:00";
-			tabledata[3]["should_time"] = "18:00";
-			tabledata[4]["should_time"] = "19:00";
-			tabledata[5]["should_time"] = "20:00";
-		}
-		
+		tabledata = new Array();
+		tabledata = data["data"];
 		$('#table').bootstrapTable('load', tabledata);
 	}
 
+	function requestinfo2(data,status){
+		var project_id = Request("project_id");
+		//av控台区字幕需要添加编辑人员
+		if (project_id != 4) {
+			$('#table2').bootstrapTable('hideColumn', "edit_man");
+		}
+		else{
+			$('#table2').bootstrapTable('showColumn', "edit_man");
+		}
+		//没有区域数据的隐藏区域列
+		if (project_id == 1 || project_id == 4 || project_id == 5 || project_id == 13 || project_id == 16) {
+			$('#table2').bootstrapTable('showColumn', "region");
+		}
+		else{
+			$('#table2').bootstrapTable('hideColumn', "region");
+		}
+		tabledata2 = new Array();
+		tabledata2 = data["data"];
+		$('#table2').bootstrapTable('load', tabledata2);
+	}
+
 	relaodinfo(1);
+	relaodinfo(2);
 
 	//选择按钮变化
 	function click_row(index){
@@ -345,12 +367,25 @@
 		$('#table').bootstrapTable('updateRow', {index: index, row: tabledata[index]});
 	}
 
+	function click_row2(index){
+		if (tabledata2[index]["checkbox"] == 1) {
+			tabledata2[index]["checkbox"] = 0;
+		}
+		else if (tabledata2[index]["checkbox"] == -1){
+
+		}
+		else{
+			tabledata2[index]["checkbox"] = 1;
+		}
+		$('#table2').bootstrapTable('updateRow', {index: index, row: tabledata2[index]});
+	}
+
 	//发送确认信息
-	function send_confrim(name,desc,id_arr,code,edit){
+	function send_confrim(name,desc,id_arr,code){
 		console.log(code);
 		console.log(id_arr);
 		console.log(Request("project_id"));
-		var dic = {"user":name,"desc":desc,"id_arr":id_arr,"project_id":Request("project_id"),"code_arr":code,"edit":edit};
+		var dic = {"user":name,"desc":desc,"id_arr":id_arr,"project_id":Request("project_id"),"code_arr":code};
 		var url = http + "index/submit_confirm";
 		$.post(url,dic,send_requstinfo);
 	}
@@ -360,7 +395,7 @@
 		console.log(data);
 		if (data["code"] == 200) {
 			relaodinfo(1);
-			//relaodinfo(2);
+			relaodinfo(2);
 		};
 	}
 
@@ -429,6 +464,7 @@
 			send_rep_info();
 		};
 	}
+
 	</script>
 </body>
 </html>
