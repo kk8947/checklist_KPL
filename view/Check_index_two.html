@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>游击Check</title>
+	<title id="titleaa">游击Check</title>
 
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
@@ -67,6 +67,7 @@
 			<li><a href="../view/Export.html">导出页</a></li>
 		</ul>
 	</li>
+	<img src="../image/vspn_slogan.png" style="height:40px;">
 	</ul>
 
 	<header class="header">
@@ -85,7 +86,7 @@
 	<div class="export_bg" style="margin-top:20px;">
 		<table id="table2"></table>
 	</div>
-	<div style="text-align:right"><input type="button" value="提交" class="btn btn-success" id="btnFrm" style="width:170px; margin-right: 20px; margin-top: 15px;" /></div>
+	<div style="text-align:right"><input type="button" value="提交" class="btn btn-success" id="btnFrm" style="width:170px; margin-right: 20px; margin-top: 10px;" /></div>
 
 	<div id="rep_btn" style="text-align:right"><input type="button" value="添加负责人检查意见" class="btn btn-success" id="btn_rep" style="width:170px; margin-right: 20px; margin-top:10px;"/></div>
 
@@ -110,6 +111,7 @@
 		document.getElementById("cu_date").innerHTML = day;
 		document.getElementById("project_name").innerHTML = exchange_project_name(Request("project_id"));
 		document.getElementById("second_titel").innerHTML = exchange_second_titel(Request("project_id"));
+		document.getElementById("titleaa").innerHTML = exchange_project_name(Request("project_id"));
 		
  	};
 
@@ -150,8 +152,8 @@
 						}
 					},
 				},
-				{field:"code",title:"编号",align:'center',valign: 'middle'},
 				{field:"region",title:"区域",align:'center',valign: 'middle'},
+				{field:"code",title:"编号",align:'center',valign: 'middle'},
 				{field:"inspect",title:"检查项",align:'center',valign: 'middle'},
 				{field:"inspect_time",title:"检查时间",align:'center',valign: 'middle'},
 				{field:"edit_man",title:"编辑人员",align:'center',valign: 'middle'},
@@ -185,8 +187,8 @@
 						}
 					},
 				},
-				{field:"code",title:"编号",align:'center',valign: 'middle'},
 				{field:"region",title:"区域",align:'center',valign: 'middle'},
+				{field:"code",title:"编号",align:'center',valign: 'middle'},
 				{field:"inspect",title:"检查项",align:'center',valign: 'middle'},
 				{field:"inspect_time",title:"检查时间",align:'center',valign: 'middle'},
 				{field:"edit_man",title:"编辑人员",align:'center',valign: 'middle'},
@@ -327,6 +329,7 @@
 		tabledata = new Array();
 		tabledata = data["data"];
 		$('#table').bootstrapTable('load', tabledata);
+		mergeCells(tabledata, "region", 1, $('#table'));
 	}
 
 	function requestinfo2(data,status){
@@ -348,6 +351,7 @@
 		tabledata2 = new Array();
 		tabledata2 = data["data"];
 		$('#table2').bootstrapTable('load', tabledata2);
+		mergeCells2(tabledata2, "region", 1, $('#table2'));
 	}
 
 	relaodinfo(1);
@@ -365,6 +369,7 @@
 			tabledata[index]["checkbox"] = 1;
 		}
 		$('#table').bootstrapTable('updateRow', {index: index, row: tabledata[index]});
+		mergeCells(tabledata, "region", 1, $('#table'));
 	}
 
 	function click_row2(index){
@@ -378,6 +383,7 @@
 			tabledata2[index]["checkbox"] = 1;
 		}
 		$('#table2').bootstrapTable('updateRow', {index: index, row: tabledata2[index]});
+		mergeCells2(tabledata2, "region", 1, $('#table2'));
 	}
 
 	//发送确认信息
@@ -465,6 +471,61 @@
 		};
 	}
 
+	//合并相同名字单元格
+	function mergeCells(data,fieldName,colspan,target){
+    	//声明一个map计算相同属性值在data对象出现的次数和
+    	var sortMap = {};
+    	for(var i = 0 ; i < tabledata.length ; i++){
+        	for(var prop in tabledata[i]){
+            	if(prop == fieldName){
+                	var key = tabledata[i][prop]
+                	if(sortMap.hasOwnProperty(key)){
+                    	sortMap[key] = sortMap[key] * 1 + 1;
+                	} else {
+                    	sortMap[key] = 1;
+                	}
+                	break;
+            	} 
+        	}
+    	}
+    	for(var prop in sortMap){
+        	console.log(prop,sortMap[prop])
+    	}
+    	var index = 0;
+    	for(var prop in sortMap){
+        	var count = sortMap[prop] * 1;
+        	$('#table').bootstrapTable('mergeCells',{index:index, field:fieldName, colspan: colspan, rowspan: count});   
+        	index += count;
+    	}
+	}
+
+	//合并相同名字单元格
+	function mergeCells2(data,fieldName,colspan,target){
+    	//声明一个map计算相同属性值在data对象出现的次数和
+    	var sortMap = {};
+    	for(var i = 0 ; i < tabledata2.length ; i++){
+        	for(var prop in tabledata2[i]){
+            	if(prop == fieldName){
+                	var key = tabledata2[i][prop]
+                	if(sortMap.hasOwnProperty(key)){
+                    	sortMap[key] = sortMap[key] * 1 + 1;
+                	} else {
+                    	sortMap[key] = 1;
+                	}
+                	break;
+            	} 
+        	}
+    	}
+    	for(var prop in sortMap){
+        	console.log(prop,sortMap[prop])
+    	}
+    	var index = 0;
+    	for(var prop in sortMap){
+        	var count = sortMap[prop] * 1;
+        	$('#table2').bootstrapTable('mergeCells',{index:index, field:fieldName, colspan: colspan, rowspan: count});   
+        	index += count;
+    	}
+	}
 	</script>
 </body>
 </html>

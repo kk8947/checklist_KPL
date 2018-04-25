@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>游击Check</title>
+	<title id="titleaa">游击Check</title>
 
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
@@ -67,6 +67,7 @@
 			<li><a href="../view/Export.html">导出页</a></li>
 		</ul>
 	</li>
+	<img src="../image/vspn_slogan.png" style="height:40px;">
 	</ul>
 
 	<header class="header">
@@ -100,6 +101,7 @@
 
 		document.getElementById("cu_date").innerHTML = day;
 		document.getElementById("project_name").innerHTML = exchange_project_name(Request("project_id"));
+		document.getElementById("titleaa").innerHTML = exchange_project_name(Request("project_id"));
 		
  	};
 
@@ -140,8 +142,8 @@
 						}
 					},
 				},
-				{field:"code",title:"编号",align:'center',valign: 'middle'},
 				{field:"region",title:"区域",align:'center',valign: 'middle'},
+				{field:"code",title:"编号",align:'center',valign: 'middle'},
 				{field:"inspect",title:"检查项",align:'center',valign: 'middle'},
 				{field:"should_time",title:"应该检查时间",align:'center',valign: 'middle'},
 				{field:"inspect_time",title:"检查时间",align:'center',valign: 'middle'},
@@ -327,6 +329,11 @@
 		}
 		
 		$('#table').bootstrapTable('load', tabledata);
+		mergeCells(tabledata, "region", 1, $('#table'));
+		if (project_id != 16) {
+			mergeCells(tabledata, "should_time", 1, $('#table'));
+		};
+		
 	}
 
 	relaodinfo(1);
@@ -343,6 +350,10 @@
 			tabledata[index]["checkbox"] = 1;
 		}
 		$('#table').bootstrapTable('updateRow', {index: index, row: tabledata[index]});
+		mergeCells(tabledata, "region", 1, $('#table'));
+		if (project_id != 16) {
+			mergeCells(tabledata, "should_time", 1, $('#table'));
+		};
 	}
 
 	//发送确认信息
@@ -428,6 +439,34 @@
 			$("#rep_btn").remove();
 			send_rep_info();
 		};
+	}
+
+	//合并相同名字单元格
+	function mergeCells(data,fieldName,colspan,target){
+    	//声明一个map计算相同属性值在data对象出现的次数和
+    	var sortMap = {};
+    	for(var i = 0 ; i < tabledata.length ; i++){
+        	for(var prop in tabledata[i]){
+            	if(prop == fieldName){
+                	var key = tabledata[i][prop]
+                	if(sortMap.hasOwnProperty(key)){
+                    	sortMap[key] = sortMap[key] * 1 + 1;
+                	} else {
+                    	sortMap[key] = 1;
+                	}
+                	break;
+            	} 
+        	}
+    	}
+    	for(var prop in sortMap){
+        	console.log(prop,sortMap[prop])
+    	}
+    	var index = 0;
+    	for(var prop in sortMap){
+        	var count = sortMap[prop] * 1;
+        	$('#table').bootstrapTable('mergeCells',{index:index, field:fieldName, colspan: colspan, rowspan: count});   
+        	index += count;
+    	}
 	}
 	</script>
 </body>
